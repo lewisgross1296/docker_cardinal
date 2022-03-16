@@ -6,11 +6,19 @@ RUN useradd ligross
 
 RUN apt-get update && \
     apt-get install -y \
-        git
+        git \
+        wget
 
 RUN mkdir /home/multiphysics && \
     cd /home/multiphysics && \
     git clone https://github.com/neams-th-coe/cardinal.git && \
     ls /home/multiphysics/cardinal
 
-# potentially useful WORKDIR /home/multiphysics/cardinal
+WORKDIR /home/multiphysics/cardinal
+
+RUN ./scripts/get-dependencies.sh
+
+# get this to work
+RUN ./scripts/download-openmc-cross-sections.sh
+
+RUN ls /home/multiphysics
