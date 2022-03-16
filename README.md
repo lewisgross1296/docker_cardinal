@@ -5,6 +5,9 @@ Repository to build and test Cardinal using Docker
 # docker build -t user_name/image_name:tag_name . (. is technically path to directory containing Dockerfile)
 # if no tag is used, the tag latest will be applied to the image with the most recent build
 docker build -t ligross/cardinal:cardinal_stable .
+# if you want a build from no cache
+docker build --no-cache -t ligross/cardinal:cardinal_stable .
+
 
 # run in interactive mode with -i 
 # docker container run -it [image id] or 
