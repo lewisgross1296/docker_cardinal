@@ -25,5 +25,3 @@ RUN bash ./scripts/get-dependencies.sh
 
 # obtain and unpack cross sections from ANL Box
 RUN wget -q -O - https://anl.box.com/shared/static/9igk353zpy8fn9ttvtrqgzvw1vtejoz6.xz | tar -C ../cross_sections -xJ
-
-RUN ls /home/multiphysics/cross_sections
