@@ -10,8 +10,9 @@ RUN apt-get update && \
         git \
         wget \
         xz-utils \
-        gcc 
-# added gcc to try and fix hdf5 error, but it probably didn't so maybe remove
+        mpich libmpich-dev \
+        openmpi-bin libopenmpi-dev
+# need mpicc, i believe the correct package is called mpich
 
 # create directorries needed for data, dependencies and cloning cardinal
 RUN mkdir /home/multiphysics && \
