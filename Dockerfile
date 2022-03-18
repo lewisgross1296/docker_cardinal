@@ -9,7 +9,9 @@ RUN apt-get update && \
     apt-get install -y \
         git \
         wget \
-        xz-utils 
+        xz-utils \
+        gcc 
+# added gcc to try and fix hdf5 error, but it probably didn't so maybe remove
 
 # create directorries needed for data, dependencies and cloning cardinal
 RUN mkdir /home/multiphysics && \
