@@ -4,15 +4,17 @@ FROM ubuntu:20.04
 
 RUN useradd ligross
 
-# get git and wget
+# get software where apt-get is sufficient
 RUN apt-get update && \
     apt-get install -y \
         git \
         wget \
-        xz-utils
+        xz-utils 
 
-# create directorries needed and clone cardinal
+# create directorries needed for data, dependencies and cloning cardinal
 RUN mkdir /home/multiphysics && \
+    mkdir /home/software && \
+    mkdir /home/software/temp && \
     mkdir /home/multiphysics/cross_sections && \
     cd /home/multiphysics && \
     git clone https://github.com/neams-th-coe/cardinal.git
@@ -33,5 +35,25 @@ ENV CXX mpicxx
 ENV FC mipf90
 ENV OPENMC_CROSS_SECTIONS /home/multiphysics/cross_sections/endfb71_hdf5/cross_sections.xml
 
-# Obtain Makefile
-COPY Makefile /home/multiphysics/cardinal/
+# build hdf5 and install in /home/software
+RUN mkdir /home/software/hdf5 && \
+    cd /home/software/temp && \
+    wget https://support.hdfgroup.org/ftp/HDF5/releases/hdf5-1.13/hdf5-1.13.1/src/hdf5-1.13.1.tar.gz && \
+    tar -xvf hdf5-1.13.1.tar.gz && \
+    cd hdf5-1.13.1 && \
+    mkdir build && \
+    cd build; \
+    ../configure --prefix="/home/software/hdf5" --enable-optimization --enable-shared --enable-cxx --enable-hl --disable-debug; \
+    # cat config.log
+    # make && \
+    # make install && \
+    # rm -rf /home/software/temp/* 
+
+# RUN h5ls --version && \
+#     find . -name "hdf5.h"
+
+# # Obtain Makefile
+# COPY Makefile /home/multiphysics/cardinal/
+
+# remove temp directory used to handle build of dependencies
+# RUN rm -rf /home/simulator/temp
