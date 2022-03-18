@@ -4,15 +4,20 @@ FROM ubuntu:20.04
 
 RUN useradd ligross
 
-# get software where apt-get is sufficient
+# install software where apt-get is sufficient
 RUN apt-get update && \
     apt-get install -y \
         git \
         wget \
-        xz-utils \
+        xz-utils 
+
+# to prevent prompt during build of mpich
+RUN DEBIAN_FRONTEND=noninteractive TZ=America/Chicago apt-get -y install tzdata
+
+# need mpicc and openmpi for OpenMC/HDF5
+RUN apt-get install -y \
         mpich libmpich-dev \
         openmpi-bin libopenmpi-dev
-# need mpicc, i believe the correct package is called mpich
 
 # create directorries needed for data, dependencies and cloning cardinal
 RUN mkdir /home/multiphysics && \
@@ -38,19 +43,18 @@ ENV CXX mpicxx
 ENV FC mipf90
 ENV OPENMC_CROSS_SECTIONS /home/multiphysics/cross_sections/endfb71_hdf5/cross_sections.xml
 
-# build hdf5 and install in /home/software
+# build hdf5 and install in /home/software/hdf5
 RUN mkdir /home/software/hdf5 && \
     cd /home/software/temp && \
     wget https://support.hdfgroup.org/ftp/HDF5/releases/hdf5-1.13/hdf5-1.13.1/src/hdf5-1.13.1.tar.gz && \
     tar -xvf hdf5-1.13.1.tar.gz && \
     cd hdf5-1.13.1 && \
     mkdir build && \
-    cd build; \
-    ../configure --prefix="/home/software/hdf5" --enable-optimization --enable-shared --enable-cxx --enable-hl --disable-debug; \
-    # cat config.log
-    # make && \
-    # make install && \
-    # rm -rf /home/software/temp/* 
+    cd build && \
+    ../configure --prefix="/home/software/hdf5" --enable-optimization --enable-shared --enable-cxx --enable-hl --enable-build-mode=production; \
+    make && \
+    make install && \
+    rm -rf /home/software/temp/* 
 
 # RUN h5ls --version && \
 #     find . -name "hdf5.h"
