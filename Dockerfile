@@ -56,7 +56,7 @@ RUN mkdir /home/software/hdf5 && \
     cd hdf5-1.13.1 && \
     mkdir build && \
     cd build && \
-    ../configure --prefix="/home/software/hdf5" --enable-optimization --enable-shared  --enable-hl --enable-build-mode=production --enable-parallel && \
+    ../configure --prefix="/home/software/hdf5" --enable-optimization=high --enable-shared  --enable-hl --enable-build-mode=production --enable-parallel && \
     make -j8 && \
     make install && \
     rm -rf /home/software/temp/* 
