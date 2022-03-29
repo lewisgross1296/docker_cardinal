@@ -59,24 +59,24 @@ RUN mkdir /home/software/hdf5 && \
     ../configure --prefix="/home/software/hdf5" --enable-optimization=high --enable-shared  --enable-hl --enable-build-mode=production --enable-parallel && \
     make -j8 && \
     make install && \
-    rm -rf /home/software/temp/* 
+    rm -rf /home/software/temp/*  
 
 # HDF5 env vars
-# ENV HDF5_ROOT /home/software/hdf5
-# ENV HDF5_INCLUDE_DIR /home/software/hdf5/include
-# ENV HDF5_LIBDIR /home/software/hdf5/lib
-# ENV METHOD opt
+ENV HDF5_ROOT /home/software/hdf5
+ENV HDF5_INCLUDE_DIR /home/software/hdf5/include
+ENV HDF5_LIBDIR /home/software/hdf5/lib
+ENV METHOD opt
 
 # Set OCCA backend
-# ENV NEKRS_OCCA_MODE_DEFAULT CPU
+ENV NEKRS_OCCA_MODE_DEFAULT CPU
 
-# TODO delete after successul hdf5 build
-# RUN h5ls --version && \
-#     find . -name "hdf5.h"
+# Set the Python path as it will be used
+ENV PYTHONPATH /usr/bin/python
 
 # build PETSc and libMesh, okay if PETSc tests fail
-# RUN bash ./contrib/moose/scripts/update_and_rebuild_petsc.sh && \
-#     bash ./contrib/moose/scripts/update_and_rebuild_libmesh.sh
+# python path maybe... where is it installed?
+RUN ./contrib/moose/scripts/update_and_rebuild_petsc.sh && \
+    ./contrib/moose/scripts/update_and_rebuild_libmesh.sh
 
 # # Obtain Makefile
 # COPY Makefile /home/multiphysics/cardinal/
