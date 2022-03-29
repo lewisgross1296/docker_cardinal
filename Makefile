@@ -23,7 +23,7 @@
 # ======================================================================================
 
 # Whether you want to build with NekRS; set to anything except 'yes' to skip
-ENABLE_NEK          ?= no
+ENABLE_NEK          ?= yes
 
 # Whether you want to build with OpenMC; set to anything except 'yes' to skip
 ENABLE_OPENMC       ?= yes
