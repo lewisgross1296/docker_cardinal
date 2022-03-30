@@ -14,16 +14,19 @@ RUN apt-get update && \
         xz-utils \
         gcc \
         make \
-        python3
+        python3 \
+        python3-distutils \
+        flex \
+        bison
 
-
-# to prevent prompt during build of mpich
+# install tzdata before the next package set
 RUN DEBIAN_FRONTEND=noninteractive TZ=America/Chicago apt-get -y install tzdata
 
-# need mpicc and openmpi for OpenMC/HDF5
+# packages that need to be installed after tzdata is properly installed
 RUN apt-get install -y \
         mpich libmpich-dev \
-        openmpi-bin libopenmpi-dev
+        openmpi-bin libopenmpi-dev \
+        cmake
 
 # create directorries needed for data, dependencies and cloning cardinal
 RUN mkdir /home/multiphysics && \
@@ -72,9 +75,10 @@ ENV METHOD opt
 # Set OCCA backend
 ENV NEKRS_OCCA_MODE_DEFAULT CPU
 
-# Create an alias so that old uses of python launch python 3 instead
-RUN echo '\n' >> ~/.bashrc
-RUN echo "alias python='python3'" >> ~/.bashrc
+# set alternative so that python runs python 3 code without installing python 2 
+# the arguments are as follows:
+# RUN update-alternatives --install </path/to/alternative> <name> </path/to/source> <priority>
+RUN update-alternatives --install /usr/local/bin/python python /usr/bin/python3 99
 
 # build PETSc and libMesh, okay if PETSc tests fail
 # python path maybe... where is it installed?
