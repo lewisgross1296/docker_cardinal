@@ -7,12 +7,15 @@ RUN useradd ligross
 # install software where apt-get is sufficient
 #TODO apt or apt-get? seems to be fine w apt get but internet says use apt
 RUN apt-get update && \
+    apt-get -y upgrade && \
     apt-get install -y \
         git \
         wget \
         xz-utils \
         gcc \
-        make
+        make \
+        python3
+
 
 # to prevent prompt during build of mpich
 RUN DEBIAN_FRONTEND=noninteractive TZ=America/Chicago apt-get -y install tzdata
@@ -21,7 +24,6 @@ RUN DEBIAN_FRONTEND=noninteractive TZ=America/Chicago apt-get -y install tzdata
 RUN apt-get install -y \
         mpich libmpich-dev \
         openmpi-bin libopenmpi-dev
-#TODO can i combine all the above runs?
 
 # create directorries needed for data, dependencies and cloning cardinal
 RUN mkdir /home/multiphysics && \
@@ -70,8 +72,9 @@ ENV METHOD opt
 # Set OCCA backend
 ENV NEKRS_OCCA_MODE_DEFAULT CPU
 
-# Set the Python path as it will be used
-ENV PYTHONPATH /usr/bin/python
+# Create an alias so that old uses of python launch python 3 instead
+RUN echo '\n' >> ~/.bashrc
+RUN echo "alias python='python3'" >> ~/.bashrc
 
 # build PETSc and libMesh, okay if PETSc tests fail
 # python path maybe... where is it installed?
