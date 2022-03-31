@@ -16,8 +16,12 @@ RUN apt-get update && \
         make \
         python3 \
         python3-distutils \
+        python3-dev \
+        python3-pip \
         flex \
         bison
+
+RUN pip install python-config
 
 # install tzdata before the next package set
 RUN DEBIAN_FRONTEND=noninteractive TZ=America/Chicago apt-get -y install tzdata
@@ -85,9 +89,13 @@ RUN update-alternatives --install /usr/local/bin/python python /usr/bin/python3 
 RUN ./contrib/moose/scripts/update_and_rebuild_petsc.sh && \
     ./contrib/moose/scripts/update_and_rebuild_libmesh.sh
 
+# RUN which mpif90
+# RUN ls /usr/bin | grep mpi
+# RUN ls /usr/bin/bash
+
 # # Obtain Makefile
-# COPY Makefile /home/multiphysics/cardinal/
-# RUN make -j8
+COPY Makefile /home/multiphysics/cardinal/
+RUN make -j8
 
 # remove temp directory used to handle build of dependencies
 # RUN rm -rf /home/simulator/temp
