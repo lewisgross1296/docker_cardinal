@@ -30,7 +30,8 @@ RUN DEBIAN_FRONTEND=noninteractive TZ=America/Chicago apt-get -y install tzdata
 RUN apt-get install -y \
         mpich libmpich-dev \
         openmpi-bin libopenmpi-dev \
-        cmake
+        cmake \
+        pkg-config
 
 # create directorries needed for data, dependencies and cloning cardinal
 RUN mkdir /home/multiphysics && \
