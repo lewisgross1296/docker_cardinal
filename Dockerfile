@@ -94,7 +94,9 @@ RUN ./contrib/moose/scripts/update_and_rebuild_petsc.sh && \
 COPY Makefile /home/multiphysics/cardinal/
 RUN make -j8
 
-# remove temp directory used to handle build of dependencies
-# RUN rm -rf /home/simulator/temp
-# TODO potentiatlly remove build directory and other compliation outputs that 
-# aren't needed to run cardrinal, reduce image size, push/pull time
+# Remove files not needed to run cardrinal. reduces image size, push/pull time
+RUN rm -rf /home/simulator/temp
+# TODO potentiatlly remove build directory and other compliation outputs 
+
+# Run tests
+RUN ./run_tests -j8
