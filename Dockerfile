@@ -53,7 +53,7 @@ RUN wget -q -O - https://anl.box.com/shared/static/9igk353zpy8fn9ttvtrqgzvw1vtej
 ENV NEKRS_HOME /home/multiphysics/cardinal/install
 ENV CC mpicc
 ENV CXX mpicxx
-ENV FC mipf90
+ENV FC mpif90
 ENV OPENMC_CROSS_SECTIONS /home/multiphysics/cross_sections/endfb71_hdf5/cross_sections.xml
 
 # build hdf5 and install in /home/software/hdf5
@@ -89,11 +89,7 @@ RUN update-alternatives --install /usr/local/bin/python python /usr/bin/python3 
 RUN ./contrib/moose/scripts/update_and_rebuild_petsc.sh && \
     ./contrib/moose/scripts/update_and_rebuild_libmesh.sh
 
-# RUN which mpif90
-# RUN ls /usr/bin | grep mpi
-# RUN ls /usr/bin/bash
-
-# # Obtain Makefile
+# # Obtain Makefile and build
 COPY Makefile /home/multiphysics/cardinal/
 RUN make -j8
 
