@@ -100,5 +100,9 @@ ENV PYTHONPATH /home/multiphysics/cardinal/contrib/moose/python:{$PYTHONPATH}
 RUN rm -rf /home/simulator/temp
 # TODO potentiatlly remove build directory and other compliation outputs 
 
+RUN echo $LIBMESH_DIR
+RUN echo $PETSC_DIR
+RUN echo $MOOSE_DIR
+
 # Run tests
 RUN ./run_tests -j8
