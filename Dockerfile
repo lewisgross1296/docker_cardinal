@@ -86,13 +86,15 @@ ENV NEKRS_OCCA_MODE_DEFAULT CPU
 RUN update-alternatives --install /usr/local/bin/python python /usr/bin/python3 99
 
 # build PETSc and libMesh, okay if PETSc tests fail
-# python path maybe... where is it installed?
 RUN ./contrib/moose/scripts/update_and_rebuild_petsc.sh && \
     ./contrib/moose/scripts/update_and_rebuild_libmesh.sh
 
-# # Obtain Makefile and build
+# Obtain Makefile and build
 COPY Makefile /home/multiphysics/cardinal/
 RUN make -j8
+
+# Add python path after build complete
+ENV PYTHONPATH /home/multiphysics/cardinal/contrib/moose/python:{$PYTHONPATH}
 
 # Remove files not needed to run cardrinal. reduces image size, push/pull time
 RUN rm -rf /home/simulator/temp
