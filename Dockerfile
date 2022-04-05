@@ -80,6 +80,9 @@ ENV METHOD opt
 # Set OCCA backend
 ENV NEKRS_OCCA_MODE_DEFAULT CPU
 
+# Add python path
+ENV PYTHONPATH /home/multiphysics/cardinal/contrib/moose/python:{$PYTHONPATH}
+
 # set alternative so that python runs python 3 code without installing python 2 
 # the arguments are as follows:
 # RUN update-alternatives --install </path/to/alternative> <name> </path/to/source> <priority>
@@ -93,12 +96,17 @@ RUN ./contrib/moose/scripts/update_and_rebuild_petsc.sh && \
 COPY Makefile /home/multiphysics/cardinal/
 RUN make -j8
 
-# Add python path after build complete
-ENV PYTHONPATH /home/multiphysics/cardinal/contrib/moose/python:{$PYTHONPATH}
-
 # Remove files not needed to run cardrinal. reduces image size, push/pull time
 RUN rm -rf /home/simulator/temp
 # TODO potentiatlly remove build directory and other compliation outputs 
+
+# Set environment variables so tests can run
+ENV MOOSE_DIR /home/multiphysics/cardinal/contrib/moose
+# tests seem to run with or with out the PETSC_DIR
+ENV PETSC_DIR /home/multiphysics/cardinal/contrib/moose/petsc/
+# when either of the two are commented in, the tests dont run. when they are commented out. the tests run
+# ENV LIBMESH_DIR /home/multiphysics/cardinal/contrib/moose/libmesh/
+# ENV LIBMESH_DIR /home/multiphysics/cardinal/contrib/moose/libmesh/installed/bin
 
 RUN echo $LIBMESH_DIR
 RUN echo $PETSC_DIR
