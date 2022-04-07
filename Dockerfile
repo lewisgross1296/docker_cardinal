@@ -126,4 +126,6 @@ RUN touch before_tests.txt
 RUN env | sort >> before_tests.txt
 
 # # Run tests
+# RUN touch test_output
+# RUN ./run_tests -j8 >> test_output
 RUN ./run_tests -j8
