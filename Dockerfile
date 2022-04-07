@@ -1,11 +1,11 @@
 # This Dockerfile builds, installs, and tests Cardinal in a clean environment
-
 FROM ubuntu:20.04
 
-RUN useradd ligross
+# Add non root user to system
+RUN useradd -s /bin/bash multiphysics
 
-# install software where apt-get is sufficient
-#TODO apt or apt-get? seems to be fine w apt get but internet says use apt
+## Commands that need to be run from root
+# install software where apt-get is sufficient as root user
 RUN apt-get update && \
     apt-get -y upgrade && \
     apt-get install -y \
@@ -33,12 +33,20 @@ RUN apt-get install -y \
         cmake \
         pkg-config
 
-# create directorries needed for data, dependencies and cloning cardinal
-RUN mkdir /home/multiphysics && \
-    mkdir /home/software && \
+# create directorries needed for data, dependencies, and cloning cardinal
+RUN mkdir /home/software && \
     mkdir /home/software/temp && \
-    mkdir /home/multiphysics/cross_sections && \
-    cd /home/multiphysics && \
+    mkdir /home/multiphysics && \
+    mkdir /home/multiphysics/cross_sections
+
+# Make multiphysics the owner of /home/multiphysics and /home/softawre to avoid permisisons issues
+RUN chown -R multiphysics /home/multiphysics
+RUN chown -R multiphysics /home/software
+
+## Change user so that non-root user is running MPI
+USER multiphysics
+
+RUN cd /home/multiphysics && \
     git clone https://github.com/neams-th-coe/cardinal.git
 
 # set the working directory so dependencies can be obtained via get-dependencies.sh
@@ -92,6 +100,10 @@ RUN update-alternatives --install /usr/local/bin/python python /usr/bin/python3 
 RUN ./contrib/moose/scripts/update_and_rebuild_petsc.sh && \
     ./contrib/moose/scripts/update_and_rebuild_libmesh.sh
 
+# See environemnt before make
+RUN touch before_make.txt
+RUN env | sort >> before_make.txt
+
 # Obtain Makefile and build
 COPY Makefile /home/multiphysics/cardinal/
 RUN make -j8
@@ -101,16 +113,17 @@ RUN rm -rf /home/simulator/temp
 # TODO potentiatlly remove build directory and other compliation outputs 
 
 # Set environment variables so tests can run
+# NEEDS MOOSE_DIR to run tests
 ENV MOOSE_DIR /home/multiphysics/cardinal/contrib/moose
 # tests seem to run with or with out the PETSC_DIR
-ENV PETSC_DIR /home/multiphysics/cardinal/contrib/moose/petsc/
+# ENV PETSC_DIR /home/multiphysics/cardinal/contrib/moose/petsc/
 # when either of the two are commented in, the tests dont run. when they are commented out. the tests run
 # ENV LIBMESH_DIR /home/multiphysics/cardinal/contrib/moose/libmesh/
 # ENV LIBMESH_DIR /home/multiphysics/cardinal/contrib/moose/libmesh/installed/bin
 
-RUN echo $LIBMESH_DIR
-RUN echo $PETSC_DIR
-RUN echo $MOOSE_DIR
+# See environemnt before running tests
+RUN touch before_tests.txt
+RUN env | sort >> before_tests.txt
 
-# Run tests
+# # Run tests
 RUN ./run_tests -j8
