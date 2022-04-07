@@ -33,6 +33,11 @@ RUN apt-get install -y \
         cmake \
         pkg-config
 
+# set alternative so that python runs python 3 code without installing python 2 
+# the arguments are as follows:
+# RUN update-alternatives --install </path/to/alternative> <name> </path/to/source> <priority>
+RUN update-alternatives --install /usr/local/bin/python python /usr/bin/python3 99
+
 # create directorries needed for data, dependencies, and cloning cardinal
 RUN mkdir /home/software && \
     mkdir /home/software/temp && \
@@ -90,11 +95,6 @@ ENV NEKRS_OCCA_MODE_DEFAULT CPU
 
 # Add python path
 ENV PYTHONPATH /home/multiphysics/cardinal/contrib/moose/python:{$PYTHONPATH}
-
-# set alternative so that python runs python 3 code without installing python 2 
-# the arguments are as follows:
-# RUN update-alternatives --install </path/to/alternative> <name> </path/to/source> <priority>
-RUN update-alternatives --install /usr/local/bin/python python /usr/bin/python3 99
 
 # build PETSc and libMesh, okay if PETSc tests fail
 RUN ./contrib/moose/scripts/update_and_rebuild_petsc.sh && \
