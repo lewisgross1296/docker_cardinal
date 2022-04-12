@@ -101,7 +101,6 @@ RUN ./contrib/moose/scripts/update_and_rebuild_petsc.sh && \
     ./contrib/moose/scripts/update_and_rebuild_libmesh.sh
 
 # See environemnt before make
-RUN touch before_make.txt
 RUN env | sort >> before_make.txt
 
 # Obtain Makefile and build
@@ -122,10 +121,9 @@ ENV MOOSE_DIR /home/multiphysics/cardinal/contrib/moose
 # ENV LIBMESH_DIR /home/multiphysics/cardinal/contrib/moose/libmesh/installed/bin
 
 # See environemnt before running tests
-RUN touch before_tests.txt
 RUN env | sort >> before_tests.txt
 
 # # Run tests
 # RUN touch test_output
-# RUN ./run_tests -j8 >> test_output
-RUN ./run_tests -j8
+# RUN ./run_tests 1>> one_thread_output.txt 2>> one_thread_error.txt
+RUN ./run_tests 1>> one_thread_output.txt 2>> one_thread_error.txt
