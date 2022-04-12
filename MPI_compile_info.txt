@@ -1,0 +1,91 @@
+Compiling C++ (in opt mode) /home/multiphysics/cardinal/contrib/moose/framework/src/base/Factory.C...
+-- Detecting Fortran/C Interface - Found GLOBAL and MODULE mangling
+-- Found MPI_C: /usr/bin/mpicc (found version "3.1") 
+-- Found MPI_CXX: /usr/bin/mpicxx (found version "3.1") 
+Compiling C++ (in opt mode) /home/multiphysics/cardinal/contrib/moose/framework/src/base/TheWarehouse.C...
+-- Found MPI_Fortran: /usr/bin/mpif90 (found version "3.1") 
+-- Found MPI: TRUE (found version "3.1")  
+-- Verifying Fortran/CXX Compiler Compatibility
+Compiling C++ (in opt mode) /home/multiphysics/cardinal/contrib/moose/framework/src/base/MooseError.C...
+-- Verifying Fortran/CXX Compiler Compatibility - Success
+-- Found OpenMP_C: -fopenmp (found version "4.5") 
+-- Found OpenMP_CXX: -fopenmp (found version "4.5") 
+-- Found OpenMP_Fortran: -fopenmp (found version "4.5") 
+-- Found OpenMP: TRUE (found version "4.5")  
+-- Using CMake version 3.16.3
+-- Performing Test Allowed_CXX_Flag_Wall__Wextra
+-- Performing Test Allowed_CXX_Flag_Wall__Wextra - Success
+-- Performing Test Allowed_CXX_Flag_Wunused_function__Wunused_variable
+-- Performing Test Allowed_CXX_Flag_Wunused_function__Wunused_variable - Success
+-- Performing Test Allowed_CXX_Flag_Wwrite_strings__Wfloat_equal
+-- Performing Test Allowed_CXX_Flag_Wwrite_strings__Wfloat_equal - Success
+-- Performing Test Allowed_CXX_Flag_Wcast_align__Wlogical_op
+-- Performing Test Allowed_CXX_Flag_Wcast_align__Wlogical_op - Success
+-- Performing Test Allowed_CXX_Flag_Wshadow
+-- Performing Test Allowed_CXX_Flag_Wshadow - Success
+-- Performing Test Allowed_CXX_Flag_Wno_unused_parameter
+-- Performing Test Allowed_CXX_Flag_Wno_unused_parameter - Success
+-- Performing Test Allowed_CXX_Flag_diag_disable_11074__diag_disable_11076
+-- Performing Test Allowed_CXX_Flag_diag_disable_11074__diag_disable_11076 - Failed
+-- Performing Test Allowed_CXX_Flag__display_error_number
+-- Performing Test Allowed_CXX_Flag__display_error_number - Failed
+-- Performing Test Allowed_CXX_Flag_Werror
+-- Performing Test Allowed_CXX_Flag_Werror - Success
+-- Performing Test Allowed_C_Flag_Wall__Wextra
+-- Performing Test Allowed_C_Flag_Wall__Wextra - Success
+-- Performing Test Allowed_C_Flag_Wunused_function__Wunused_variable
+-- Performing Test Allowed_C_Flag_Wunused_function__Wunused_variable - Success
+-- Performing Test Allowed_C_Flag_Wwrite_strings__Wfloat_equal
+-- Performing Test Allowed_C_Flag_Wwrite_strings__Wfloat_equal - Success
+-- Performing Test Allowed_C_Flag_Wcast_align__Wlogical_op
+-- Performing Test Allowed_C_Flag_Wcast_align__Wlogical_op - Success
+-- Performing Test Allowed_C_Flag_Wshadow
+-- Performing Test Allowed_C_Flag_Wshadow - Success
+-- Performing Test Allowed_C_Flag_Wno_c__11_long_long
+-- Performing Test Allowed_C_Flag_Wno_c__11_long_long - Success
+-- Performing Test Allowed_C_Flag_diag_disable_11074__diag_disable_11076
+-- Performing Test Allowed_C_Flag_diag_disable_11074__diag_disable_11076 - Failed
+-- Performing Test Allowed_C_Flag__display_error_number
+-- Performing Test Allowed_C_Flag__display_error_number - Failed
+-- Performing Test Allowed_C_Flag_Werror
+-- Performing Test Allowed_C_Flag_Werror - Success
+-- Performing Test COMPILER_SUPPORTS_NO_STRICT_ALIASING
+-- Performing Test COMPILER_SUPPORTS_NO_STRICT_ALIASING - Success
+-- System     : Linux-4.15.0-173-generic
+-- Build type : Release
+-- C flags    :  -Wall -Wextra -Wunused-function -Wunused-variable -Wwrite-strings -Wfloat-equal -Wcast-align -Wlogical-op -Wshadow -Wno-c++11-long-long  -fopenmp -O3 -DNDEBUG
+-- CXX flags  :  -Wall -Wextra -Wunused-function -Wunused-variable -Wwrite-strings -Wfloat-equal -Wcast-align -Wlogical-op -Wshadow -Wno-unused-parameter  -fopenmp -fno-strict-aliasing -O3 -DNDEBUG
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE  
+-- Found OpenMP_C: -fopenmp (found version "4.5") 
+-- Found OpenMP_CXX: -fopenmp (found version "4.5") 
+-- Found OpenMP_Fortran: -fopenmp (found version "4.5") 
+-- OpenMP include dirs: 
+-- OpenMP libraries:    /usr/lib/gcc/x86_64-linux-gnu/9/libgomp.so
+-- MPI include dirs: 
+-- MPI libraries:    
+-- MPI link flags:   
+-- MPI executable:   /usr/bin/mpiexec
+-- MPI numproc flag: -n
+-- Using HYPRE installation in /home/multiphysics/cardinal/contrib/moose/petsc/arch-moose
+-- Performing Test COMPILER_C_SUPPORTS_MCMODEL_MEDIUM
+-- Performing Test COMPILER_C_SUPPORTS_MCMODEL_MEDIUM - Success
+-- Performing Test COMPILER_C_SUPPORTS_MCMODEL_MEDIUM_FPIC
+-- Performing Test COMPILER_C_SUPPORTS_MCMODEL_MEDIUM_FPIC - Success
+-- Performing Test COMPILER_Fortran_SUPPORTS_CRAYPTR
+-- Performing Test COMPILER_Fortran_SUPPORTS_CRAYPTR - Success
+
+----------------- Summary -----------------
+Installation directory: /home/multiphysics/cardinal/contrib/nekRS
+C compiler: /usr/bin/mpicc
+C++ compiler: /usr/bin/mpicxx
+Fortran compiler: /usr/bin/mpif90
+Default backend : SERIAL
+CPU backend compiler: mpicc (flags: -O2 -ftree-vectorize -funroll-loops -march=native -mtune=native)
+GPU aware MPI support disabled!
+-------------------------------------------
+-- Configuring done
+-- Generating done
