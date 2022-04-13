@@ -126,4 +126,5 @@ RUN env | sort >> before_tests.txt
 # # Run tests
 # RUN touch test_output
 # RUN ./run_tests 1>> one_thread_output.txt 2>> one_thread_error.txt
-RUN ./run_tests 1>> one_thread_output.txt 2>> one_thread_error.txt
+# RUN ./run_tests -j8 1>> j8_output.txt 2>> j8_error.txt
+# RUN ./run_tests -j8 >> no_nek_j8_output.txt

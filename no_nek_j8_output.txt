@@ -1,0 +1,601 @@
+test:userobjects/subchannel_layered.ordering_error [90m...............[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:userobjects/subchannel_layered.invalid_component [90m............[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:userobjects/subchannel_layered.type_error [90m...................[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:userobjects/subchannel_layered.conflicting_bins [90m.............[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:userobjects/subchannel_layered.pin_1d [90m.......................[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:userobjects/subchannel_layered.zero_direction_vector [90m........[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:userobjects/subchannel_layered.wrong_type [90m...................[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:userobjects/subchannel_layered.subchannel_layered [90m...........[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:userobjects/subchannel_layered.user_component [90m...............[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:userobjects/subchannel_layered.1d_output [90m....................[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:fluid_prop_subs.sodium_sub [90m............................[0m [36m[App SodiumApp not registered in executable][0m [90mSKIP[0m
+test:fluid_prop_subs.sodium [90m................................[0m [36m[App SodiumApp not registered in executable][0m [90mSKIP[0m
+test:fluid_prop_subs.iapws95_sub [90m..........................[0m [36m[App IAPWS95App not registered in executable][0m [90mSKIP[0m
+test:fluid_prop_subs.iapws95 [90m..............................[0m [36m[App IAPWS95App not registered in executable][0m [90mSKIP[0m
+test:fluid_prop_subs.potassium_sub [90m......................[0m [36m[App PotassiumApp not registered in executable][0m [90mSKIP[0m
+test:fluid_prop_subs.potassium [90m..........................[0m [36m[App PotassiumApp not registered in executable][0m [90mSKIP[0m
+test:userobjects/hexagonal_gap_layered.gap_horizontal_layered [90m....[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:userobjects/hexagonal_gap_layered.user_component [90m............[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:userobjects/hexagonal_gap_layered.gap_layered [90m...............[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:userobjects/hexagonal_gap_layered.type_error [90m................[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:userobjects/hexagonal_gap_layered.bins_too_fine [90m.............[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:userobjects/layered_layered.1d_output [90m.......................[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:userobjects/layered_layered.bins_too_fine [90m...................[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:userobjects/layered_layered.conflicting_bins [90m................[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:userobjects/layered_layered.multiple_layers [90m.................[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:userobjects/layered_layered.3d_output [90m.......................[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:userobjects/sideset_layered.side_average [90m....................[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:userobjects/sideset_layered.invalid_boundary [90m................[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:userobjects/sideset_layered.z_bins_by_centroid [90m..............[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:userobjects/sideset_layered.z_bins [90m..........................[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:conduction/nonidentical_interface/cylinders.cylinder_conduction_mini [36m[NekRSProblem not found in ...][0m [90mSKIP[0m
+test:conduction/nonidentical_interface/cylinders.cylinder_conduction_reversed [36m[NekRSProblem not found...][0m [90mSKIP[0m
+test:conduction/nonidentical_interface/cylinders.cylinder_conduction [36m[NekRSProblem not found in execu...][0m [90mSKIP[0m
+test:conduction/nonidentical_interface/cylinders.cylinder_conduction_subcycle [36m[NekRSProblem not found...][0m [90mSKIP[0m
+test:multiple_nek_apps/two_channels.app_outputs [36m[NekRSProblem not found in executable,skipped dependency][0m [90mSKIP[0m
+test:multiple_nek_apps/two_channels.invalid_write_fld [36m[NekRSProblem not found in executable,skipped d...][0m [90mSKIP[0m
+test:multiple_nek_apps/two_channels.precompile [90m...................[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:multiple_nek_apps/two_channels.two_channels [36m[NekRSProblem not found in executable,skipped depend...][0m [90mSKIP[0m
+test:nek_errors/invalid_field.invalid_output [90m.....................[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:nek_errors/invalid_field.invalid_field [90m......................[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:nek_errors/invalid_field.invalid_field_uo [90m...................[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:nek_errors/incorrect_problem.incorrect_problem_pp [90m...........[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:nek_errors/incorrect_problem.nek_mesh [90m.......................[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:nek_errors/incorrect_problem.incorrect_problem_uo [90m...........[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+tutorials/load_from_exodus.load_nek [90m...........[0m [36m[NekRSProblem not found in executable,skipped dependency][0m [90mSKIP[0m
+tutorials/load_from_exodus.run_nek [90m...............................[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:userobjects/radial_layered.1d_output [90m........................[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:userobjects/radial_layered.2d_output [90m........................[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:userobjects/hexagonal_gap_layered/normals.normal_component [90m..[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:userobjects/hexagonal_gap_layered/normals.normal_component_aux [36m[NekRSProblem not found in execut...][0m [90mSKIP[0m
+test:nek_temp/first_order.first_order_volume_temperature [90m.........[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:nek_temp/first_order.first_order_temperature [90m................[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:nek_temp/second_order.second_order_volume_temperature [90m.......[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:nek_temp/second_order.second_order_temperature [90m..............[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:nek_mesh/first_order.first_order_volume_mesh [90m................[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:nek_mesh/first_order.first_order_mesh [90m.......................[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:nek_mesh/second_order.second_order_mesh [90m.....................[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:nek_mesh/second_order.second_order_volume_mesh [90m..............[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:postprocessors/nek_weighted_side_integral.invalid_field [90m.....[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:postprocessors/nek_weighted_side_integral.nek_weighted_side_integral [36m[NekRSProblem not found in ...][0m [90mSKIP[0m
+test:postprocessors/nek_side_average.zero_direction_vector [90m.......[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:postprocessors/nek_side_average.nek_side_average [90m............[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:postprocessors/nek_volume_average.zero_direction_vector [90m.....[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:postprocessors/nek_volume_average.nek_volume_average [90m........[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:postprocessors/nek_volume_extrema.invalid_field [90m.............[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:postprocessors/nek_volume_extrema.nek_volume_extrema [90m........[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:postprocessors/nek_side_extrema.invalid_field [90m...............[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:postprocessors/nek_side_extrema.nek_side_extrema [90m............[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:nek_standalone/lowMach.boundary [90m.............................[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:nek_standalone/lowMach.volume [90m...............................[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:auxkernels/nek_spatial_bin_component_aux.invalid_field [90m......[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:auxkernels/nek_spatial_bin_component_aux.invalid_uo [90m.........[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+tutorials/subchannel.postprocessing [90m..............................[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+tutorials/standalone.standalone [90m...........................[0m [36m[HEAVY, NekRSProblem not found in executable][0m [90mSKIP[0m
+test:userobjects/side/nondimensional.nondim [90m......................[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:userobjects/gap/nondimensional.nondim [90m.......................[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:userobjects/volume/nondimensional.nondim [90m....................[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:cht/nondimensional.sfr_pincell [90m.......................[0m [36m[HEAVY, NekRSProblem not found in executable][0m [90mSKIP[0m
+test:cht/sfr_pincell.sfr_pincell [90m..........................[0m [36m[HEAVY, NekRSProblem not found in executable][0m [90mSKIP[0m
+test:cht/pincell_p_v.output_cht [90m...........................[0m [36m[HEAVY, NekRSProblem not found in executable][0m [90mSKIP[0m
+test:cht/pebble.pebble [90m...........................................[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:nek_errors/no_occa_source_kernel.no_occa_source_kernel [90m......[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:nek_errors/no_moving_mesh.no_moving_mesh [90m....................[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:nek_errors/invalid_transfer_pp.invalid_transfer_pp [90m..........[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:nek_errors/incorrect_timestepper.incorrect_timestepper [90m......[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:nek_errors/used_scratch.occupied_scratch_space [90m..............[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:nek_errors/incorrect_executioner.incorrect_executioner [90m......[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:nek_errors/mpi_setup_multiple_inputs.too_few_mpi_ranks [90m......[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:nek_errors/nonzero_start.nonzero_start_time [90m.................[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:nek_errors/no_temp_var.no_temperature_variable [90m..............[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:nek_errors/invalid_bid_postprocessor.invalid_boundary_id [90m....[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:nek_errors/invalid_bid.invalid_boundary_id [90m..................[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:nek_errors/incorrect_nek_bc.missing_flux_bc [90m.................[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:nek_errors/incorrect_mesh.incorrect_mesh [90m....................[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:nek_errors/deformation.missing_displacements [90m................[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:nek_mesh/sidesets/cube.cube_sidesets [90m........................[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:nek_mesh/sidesets/pyramid.pyramid_sidesets [90m..................[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:conduction/boundary_and_volume/prism.pyramid [90m.........[0m [36m[HEAVY, NekRSProblem not found in executable][0m [90mSKIP[0m
+test:conduction/identical_interface/cube.slab_conduction [90m.........[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:conduction/identical_interface/pyramid.pyramid_conduction [36m[HEAVY, NekRSProblem not found in exec...][0m [90mSKIP[0m
+test:conduction/identical_volume/cube.slab_heat_source [90m....[0m [36m[HEAVY, NekRSProblem not found in executable][0m [90mSKIP[0m
+test:conduction/nonidentical_volume/nondimensional.cylinder_heat_source [36m[NekRSProblem not found in ex...][0m [90mSKIP[0m
+test:conduction/nonidentical_volume/cylinder.cylinder_heat_source  [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:nek_file_output/nek_as_sub.nek_as_sub_output [90m................[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:nek_file_output/nek_as_master.nek_as_master_output [90m..........[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:nek_file_output/nek_as_master_even.nek_as_master_even_output  [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:nek_file_output/nek_as_sub_even.nek_as_sub_even_output [90m......[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:sockeye_coupling/sockeye_sub.sockeye_sub [36m[NekRSProblem not found in executable, App SockeyeApp n...][0m [90mSKIP[0m
+test:sockeye_coupling/sockeye_master.sockeye_master [36m[NekRSProblem not found in executable, App Sockey...][0m [90mSKIP[0m
+test:sam_coupling/sam_sub.sam_sub [36m[NekRSProblem not found in executable, App SamApp not registered in...][0m [90mSKIP[0m
+test:sam_coupling/sam_master.sam_master [36m[NekRSProblem not found in executable, App SamApp not registe...][0m [90mSKIP[0m
+test:postprocessors/nek_weighted_side_average.nek_weighted_side_average [36m[NekRSProblem not found in ex...][0m [90mSKIP[0m
+test:postprocessors/nek_heat_flux_integral.nek_heat_flux_integral  [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:postprocessors/nek_volume_integral.nek_volume_integral [90m......[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:postprocessors/dimensionless_numbers/nondimensional.nondimensional_Re_Pe [36m[NekRSProblem not found...][0m [90mSKIP[0m
+test:postprocessors/dimensionless_numbers/dimensional.dimensional_Re_Pe [36m[NekRSProblem not found in ex...][0m [90mSKIP[0m
+test:postprocessors/nek_side_integral.nek_side_integral [90m..........[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:nek_standalone/ethier.test [90m..................................[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:nek_standalone/conj_ht.test [90m.................................[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:nek_standalone/channel.test [90m.................................[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:nek_standalone/from_restart.postprocess_from_restart [90m........[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:nek_standalone/ktauChannel.volume [90m....................[0m [36m[HEAVY, NekRSProblem not found in executable][0m [90mSKIP[0m
+test:nek_warnings/unused_boundary.boundary_warning [90m...............[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:nek_warnings/no_temp_solve.no_temp_solve [90m....................[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:thm_coupling/thm_sub.thm_sub [90m................................[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:thm_coupling/thm_master.thm_master [90m..........................[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:deformation/simple-cube.deformed_conduction [90m.................[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:deformation/vol-areas.deformed_areas [90m........................[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:ics/bulk_energy_conservation_ic.missing_initial [90m......................................................[0m [32mOK[0m
+test:mesh/hexagonal_subchannel_mesh.three_rings [90m...........................................................[0m [32mOK[0m
+test:openmc_errors/block_mappings.overlapping_blocks [90m......................................................[0m [32mOK[0m
+test:userobjects/hexagonal_subchannel_bin.bin [90m.............................................................[0m [32mOK[0m
+test:neutronics/heat_source.overlap_all [90m...................................................................[0m [32mOK[0m
+test:neutronics/triggers.k_std_dev [90m........................................................................[0m [32mOK[0m
+test:mesh/hexagonal_gap_mesh.three_rings [90m..................................................................[0m [32mOK[0m
+test:neutronics/feedback/multi_component_temp.missing_one [90m.................................................[0m [32mOK[0m
+test:openmc_errors/input_params.invalid_batches [90m...........................................................[0m [32mOK[0m
+test:openmc_errors/mesh_tally.incorrect_scaling [90m...........................................................[0m [32mOK[0m
+test:userobjects/layered_gap_bin.bin [90m......................................................................[0m [32mOK[0m
+test:neutronics/openmc_xml.particles [90m......................................................................[0m [32mOK[0m
+test:openmc_errors/tallies.zero_tallies [90m...................................................................[0m [32mOK[0m
+test:openmc_errors/xs_temperatures.interpolation_min [90m......................................................[0m [32mOK[0m
+test:openmc_errors/cell_instances/insufficient_materials.insufficient_materials [90m...........................[0m [32mOK[0m
+test:openmc_errors/incorrect_aux_setup.incorrect_problem [90m..................................................[0m [32mOK[0m
+test:neutronics/relaxation/cell_tallies.global_with_alignment_unity_relax [90m.................................[0m [32mOK[0m
+test:openmc_errors/densities.zero_density [90m.................................................................[0m [32mOK[0m
+test:neutronics/symmetry/triso.generate_mesh [90m..............................................................[0m [32mOK[0m
+test:symmetry.reflection [90m..................................................................................[0m [32mOK[0m
+test:neutronics/mesh_tally.one_mesh [90m.......................................................................[0m [32mOK[0m
+test:userobjects/hexagonal_gap_bin.bin [90m....................................................................[0m [32mOK[0m
+test:neutronics/symmetry.generate_mesh [90m....................................................................[0m [32mOK[0m
+tutorials/gas_assembly.create_solid_mesh [90m..................................................................[0m [32mOK[0m
+test:neutronics/relaxation/mesh_tallies.global_without_alignment_unity_relax [90m..............................[0m [32mOK[0m
+test:neutronics/symmetry/rotational.generate_mesh [90m.........................................................[0m [32mOK[0m
+test:userobjects/radial_bin.bin [90m...........................................................................[0m [32mOK[0m
+test:userobjects/layered_bin.bin [90m..........................................................................[0m [32mOK[0m
+test:openmc_errors/incorrect_problem.incorrect_problem [90m....................................................[0m [32mOK[0m
+test:neutronics/heat_source/distrib_cell.solid [90m............................................................[0m [32mOK[0m
+test:openmc_errors/no_cell.no_cell [90m........................................................................[0m [32mOK[0m
+test:openmc_errors/level/phase_too_high.fluid_too_high [90m....................................................[0m [32mOK[0m
+test:openmc_errors/level/total_too_high.level_too_high [90m....................................................[0m [32mOK[0m
+test:ics/volumetric_heat_source_ic.sinusoidal [90m.............................................................[0m [32mOK[0m
+test:openmc_errors/mesh_translations.invalid_row [90m..........................................................[0m [32mOK[0m
+test:postprocessors/fission_tally_relative_error.fission_tally_relative_error [90m.............................[0m [32mOK[0m
+test:postprocessors/eigenvalue.k_eigenvalue [90m...............................................................[0m [32mOK[0m
+test:neutronics/feedback/triso/different_fill_univs.different_fill_universes [90m..............................[0m [32mOK[0m
+tutorials/gas_compact_cht.thm [90m.............................................................................[0m [32mOK[0m
+test:ics/bulk_energy_conservation_ic.invalid_mdot_cp [90m......................................................[0m [32mOK[0m
+test:mesh/hexagonal_subchannel_mesh.two_rings [90m.............................................................[0m [32mOK[0m
+test:neutronics/feedback/multiple_levels.multiple_layers [90m..................................................[0m [32mOK[0m
+test:neutronics/feedback/triso/missing_triso_fill.noncontinguous_triso_univs [90m..............................[0m [32mOK[0m
+test:userobjects/hexagonal_subchannel_bin.pin_centered [90m....................................................[0m [32mOK[0m
+test:openmc_errors/block_mappings.nonexistent_block [90m.......................................................[0m [32mOK[0m
+test:neutronics/feedback/different_units.different_units [90m..................................................[0m [32mOK[0m
+test:mesh/hexagonal_gap_mesh.two_rings [90m....................................................................[0m [32mOK[0m
+test:neutronics/heat_source.overlap_solid [90m.................................................................[0m [32mOK[0m
+test:neutronics/triggers.k_std_dev_cutoff [90m.................................................................[0m [32mOK[0m
+test:openmc_errors/input_params.invalid_max_batches [90m.......................................................[0m [32mOK[0m
+test:openmc_errors/mesh_tally.incorrect_order [90m.............................................................[0m [32mOK[0m
+test:userobjects/layered_gap_bin.axial_bin [90m................................................................[0m [32mOK[0m
+test:neutronics/feedback/multi_component_temp.wrong_length [90m................................................[0m [32mOK[0m
+test:openmc_errors/tallies.separate_tallies [90m...............................................................[0m [32mOK[0m
+test:openmc_errors/xs_temperatures.interpolation_max [90m......................................................[0m [32mOK[0m
+test:neutronics/openmc_xml.inactive [90m.......................................................................[0m [32mOK[0m
+test:openmc_errors/incorrect_aux_setup.incorrect_var_type [90m.................................................[0m [32mOK[0m
+test:neutronics/feedback/lattice.pincell [90m..................................................................[0m [32mOK[0m
+test:openmc_errors/cell_instances/insufficient_materials.no_error_for_solid [90m......................[0m [32mSYNTAX PASS[0m
+test:openmc_errors/densities.void_density [90m.................................................................[0m [32mOK[0m
+test:neutronics/feedback/single_level.pincell [90m.............................................................[0m [32mOK[0m
+test:symmetry.rotation [90m....................................................................................[0m [32mOK[0m
+test:neutronics/symmetry.symmetry_plane [90m...................................................................[0m [32mOK[0m
+test:neutronics/relaxation/cell_tallies.global_with_alignment_relax [90m.......................................[0m [32mOK[0m
+tutorials/gas_assembly.run_thm [90m...................................................................[0m [32mSYNTAX PASS[0m
+test:neutronics/feedback/unmapped_moose.unmapped [90m..........................................................[0m [32mOK[0m
+test:neutronics/source.sources [90m............................................................................[0m [32mOK[0m
+test:ics/bulk_energy_conservation_ic.sinusoidal [90m...........................................................[0m [32mOK[0m
+test:mesh/hexagonal_subchannel_mesh.one_ring [90m..............................................................[0m [32mOK[0m
+test:userobjects/hexagonal_subchannel_bin.pin_centered_3 [90m..................................................[0m [32mOK[0m
+test:neutronics/heat_source/distrib_cell.warn_zero_tallies [90m................................................[0m [32mOK[0m
+test:neutronics/symmetry/rotational.symmetry_sector [90m.......................................................[0m [32mOK[0m
+test:mesh/hexagonal_gap_mesh.one_ring [90m.....................................................................[0m [32mOK[0m
+test:openmc_errors/block_mappings.no_blocks [90m...............................................................[0m [32mOK[0m
+test:neutronics/mesh_tally.one_mesh_global [90m................................................................[0m [32mOK[0m
+test:openmc_errors/mesh_tally.incorrect_file [90m..............................................................[0m [32mOK[0m
+test:openmc_errors/input_params.missing_properties [90m........................................................[0m [32mOK[0m
+test:neutronics/heat_source.overlap_fluid [90m.................................................................[0m [32mOK[0m
+test:neutronics/triggers.k_variance [90m.......................................................................[0m [32mOK[0m
+test:ics/bulk_energy_conservation_ic.missing_paired_action [90m................................................[0m [32mOK[0m
+test:mesh/hexagonal_subchannel_mesh.three_rings_faces [90m.....................................................[0m [32mOK[0m
+test:neutronics/feedback/multi_component_temp.block_already_used [90m..........................................[0m [32mOK[0m
+test:neutronics/openmc_xml.batches [90m........................................................................[0m [32mOK[0m
+tutorials/gas_assembly.run_solid [90m.................................................................[0m [32mSYNTAX PASS[0m
+test:neutronics/relaxation/mesh_tallies.global_without_alignment_relax [90m....................................[0m [32mOK[0m
+test:openmc_errors/block_mappings.empty_block [90m.............................................................[0m [32mOK[0m
+test:ics/bulk_energy_conservation_ic.action [90m...............................................................[0m [32mOK[0m
+test:mesh/hexagonal_subchannel_mesh.two_rings_faces [90m.......................................................[0m [32mOK[0m
+test:neutronics/heat_source.partial_overlap_openmc_union [90m..................................................[0m [32mOK[0m
+test:neutronics/triggers.k_rel_err [90m........................................................................[0m [32mOK[0m
+test:mesh/hexagonal_subchannel_mesh.one_ring_faces [90m........................................................[0m [32mOK[0m
+test:openmc_errors/block_mappings.no_overlap [90m..............................................................[0m [32mOK[0m
+test:neutronics/heat_source.partial_overlap_moose_union_msg [90m...............................................[0m [32mOK[0m
+test:neutronics/feedback/multi_component_temp.collate_temps [90m...............................................[0m [32mOK[0m
+test:neutronics/relaxation/cell_tallies.global_with_alignment_rm_relax [90m....................................[0m [32mOK[0m
+test:openmc_errors/block_mappings.skipping_moose_feedback [90m.................................................[0m [32mOK[0m
+test:neutronics/triggers.tally_rel_err [90m....................................................................[0m [32mOK[0m
+test:transfers/nearest_point.nearest_point_receiver [90m..........................................[0m [36m[min_cpus=2][0m [32mOK[0m
+test:neutronics/heat_source.partial_overlap_moose_union [90m...................................................[0m [32mOK[0m
+test:openmc_errors/block_mappings.skipping_openmc_feedback [90m................................................[0m [32mOK[0m
+test:neutronics/heat_source.default_tally_blocks [90m..........................................................[0m [32mOK[0m
+test:openmc_errors/block_mappings.multiple_phases [90m.........................................................[0m [32mOK[0m
+test:neutronics/relaxation/mesh_tallies.local_without_alignment_unity_relax [90m...............................[0m [32mOK[0m
+test:openmc_errors/block_mappings.multiple_tally_settings [90m.................................................[0m [32mOK[0m
+test:neutronics/heat_source.cell_volumes [90m..................................................................[0m [32mOK[0m
+test:openmc_errors/block_mappings.absent_fluid_block [90m......................................................[0m [32mOK[0m
+test:neutronics/relaxation/cell_tallies.global_with_alignment_dg_relax [90m....................................[0m [32mOK[0m
+test:neutronics/mesh_tally.multiple_meshes [90m................................................................[0m [32mOK[0m
+test:openmc_errors/block_mappings.absent_solid_block [90m......................................................[0m [32mOK[0m
+test:openmc_errors/block_mappings.unequal_volumes [90m.........................................................[0m [32mOK[0m
+test:neutronics/symmetry/triso.symmetry_plane [90m.............................................................[0m [32mOK[0m
+test:neutronics/relaxation/mesh_tallies.local_without_alignment_relax [90m.....................................[0m [32mOK[0m
+test:neutronics/relaxation/cell_tallies.local_with_alignment_unity_relax [90m..................................[0m [32mOK[0m
+test:neutronics/triggers.mesh_tally_rel_err [90m...............................................................[0m [32mOK[0m
+test:neutronics/relaxation/mesh_tallies.output_fission_tally_mesh [90m.........................................[0m [32mOK[0m
+test:neutronics/relaxation/cell_tallies.local_with_alignment_relax [90m........................................[0m [32mOK[0m
+test:neutronics/mesh_tally.multiple_meshes_global [90m.........................................................[0m [32mOK[0m
+tutorials/lwr_solid.lwr_pincell [90m..............................................................[0m [36m[min_cpus=4][0m [32mOK[0m
+test:neutronics/relaxation/cell_tallies.global_without_alignment_unity_relax [90m..............................[0m [32mOK[0m
+test:neutronics/mesh_tally.different_units [90m................................................................[0m [32mOK[0m
+test:neutronics/relaxation/cell_tallies.global_without_alignment_relax [90m....................................[0m [32mOK[0m
+tutorials/lwr_solid.lwr_pincell_mesh [90m.........................................................[0m [36m[min_cpus=4][0m [32mOK[0m
+test:neutronics/relaxation/cell_tallies.local_without_alignment_unity_relax [90m..................[0m [36m[min_cpus=2][0m [32mOK[0m
+test:neutronics/relaxation/cell_tallies.local_without_alignment_relax [90m........................[0m [36m[min_cpus=2][0m [32mOK[0m
+test:neutronics/mesh_tally.different_units_and_translations [90m...............................................[0m [32mOK[0m
+test:neutronics/relaxation/cell_tallies.output_fission_tally_cell [90m.........................................[0m [32mOK[0m
+test:neutronics/mesh_tally.fission_tally_std_dev [90m..........................................................[0m [32mOK[0m
+test:neutronics/solid.zero_power [90m...............................................[0m [36m[min_threads=2,min_cpus=4][0m [32mOK[0m
+test:neutronics/solid.three_pebbles [90m............................................[0m [36m[min_threads=2,min_cpus=4][0m [32mOK[0m
+test:neutronics/solid.missing_pebble [90m...........................................[0m [36m[min_threads=2,min_cpus=4][0m [32mOK[0m
+[31mtutorials/pebbles.solid: [0mWorking Directory: /home/multiphysics/cardinal/tutorials/pebbles
+[31mtutorials/pebbles.solid: [0mRunning command: mpiexec -n 8 /home/multiphysics/cardinal/cardinal-opt -i solid.i openmc:Problem/particles=1000 openmc:Problem/batches=10 openmc:Problem/inactive_batches=5 --no-gdb-backtrace
+[31mtutorials/pebbles.solid: [0m--------------------------------------------------------------------------
+[31mtutorials/pebbles.solid: [0mThere are not enough slots available in the system to satisfy the 8
+[31mtutorials/pebbles.solid: [0mslots that were requested by the application:
+[31mtutorials/pebbles.solid: [0m
+[31mtutorials/pebbles.solid: [0m  /home/multiphysics/cardinal/cardinal-opt
+[31mtutorials/pebbles.solid: [0m
+[31mtutorials/pebbles.solid: [0mEither request fewer slots for your application, or make more slots
+[31mtutorials/pebbles.solid: [0mavailable for use.
+[31mtutorials/pebbles.solid: [0m
+[31mtutorials/pebbles.solid: [0mA "slot" is the Open MPI term for an allocatable unit where we can
+[31mtutorials/pebbles.solid: [0mlaunch a process.  The number of slots available are defined by the
+[31mtutorials/pebbles.solid: [0menvironment in which Open MPI processes are run:
+[31mtutorials/pebbles.solid: [0m
+[31mtutorials/pebbles.solid: [0m  1. Hostfile, via "slots=N" clauses (N defaults to number of
+[31mtutorials/pebbles.solid: [0m     processor cores if not provided)
+[31mtutorials/pebbles.solid: [0m  2. The --host command line parameter, via a ":N" suffix on the
+[31mtutorials/pebbles.solid: [0m     hostname (N defaults to 1 if not provided)
+[31mtutorials/pebbles.solid: [0m  3. Resource manager (e.g., SLURM, PBS/Torque, LSF, etc.)
+[31mtutorials/pebbles.solid: [0m  4. If none of a hostfile, the --host command line parameter, or an
+[31mtutorials/pebbles.solid: [0m     RM is present, Open MPI defaults to the number of processor cores
+[31mtutorials/pebbles.solid: [0m
+[31mtutorials/pebbles.solid: [0mIn all the above cases, if you want Open MPI to default to the number
+[31mtutorials/pebbles.solid: [0mof hardware threads instead of the number of processor cores, use the
+[31mtutorials/pebbles.solid: [0m--use-hwthread-cpus option.
+[31mtutorials/pebbles.solid: [0m
+[31mtutorials/pebbles.solid: [0mAlternatively, you can use the --oversubscribe option to ignore the
+[31mtutorials/pebbles.solid: [0mnumber of available slots when deciding the number of processes to
+[31mtutorials/pebbles.solid: [0mlaunch.
+[31mtutorials/pebbles.solid: [0m--------------------------------------------------------------------------
+[31mtutorials/pebbles.solid: [0m
+[31mtutorials/pebbles.solid: [0m
+[31mtutorials/pebbles.solid: [0mExit Code: 1
+[31mtutorials/pebbles.solid: [0m################################################################################
+[31mtutorials/pebbles.solid: [0mTester failed, reason: CRASH
+[31mtutorials/pebbles.solid: [0m
+tutorials/pebbles.solid [90m..........................................................[0m [31m[min_cpus=8][0m [31mFAILED (CRASH)[0m
+[31mtutorials/pebbles.solid_um: [0mWorking Directory: /home/multiphysics/cardinal/tutorials/pebbles
+[31mtutorials/pebbles.solid_um: [0mRunning command: mpiexec -n 8 /home/multiphysics/cardinal/cardinal-opt -i solid_um.i openmc:Problem/particles=1000 openmc:Problem/batches=10 openmc:Problem/inactive_batches=5 Mesh/pebble/file=sphere_in_m.e --no-gdb-backtrace
+[31mtutorials/pebbles.solid_um: [0m--------------------------------------------------------------------------
+[31mtutorials/pebbles.solid_um: [0mThere are not enough slots available in the system to satisfy the 8
+[31mtutorials/pebbles.solid_um: [0mslots that were requested by the application:
+[31mtutorials/pebbles.solid_um: [0m
+[31mtutorials/pebbles.solid_um: [0m  /home/multiphysics/cardinal/cardinal-opt
+[31mtutorials/pebbles.solid_um: [0m
+[31mtutorials/pebbles.solid_um: [0mEither request fewer slots for your application, or make more slots
+[31mtutorials/pebbles.solid_um: [0mavailable for use.
+[31mtutorials/pebbles.solid_um: [0m
+[31mtutorials/pebbles.solid_um: [0mA "slot" is the Open MPI term for an allocatable unit where we can
+[31mtutorials/pebbles.solid_um: [0mlaunch a process.  The number of slots available are defined by the
+[31mtutorials/pebbles.solid_um: [0menvironment in which Open MPI processes are run:
+[31mtutorials/pebbles.solid_um: [0m
+[31mtutorials/pebbles.solid_um: [0m  1. Hostfile, via "slots=N" clauses (N defaults to number of
+[31mtutorials/pebbles.solid_um: [0m     processor cores if not provided)
+[31mtutorials/pebbles.solid_um: [0m  2. The --host command line parameter, via a ":N" suffix on the
+[31mtutorials/pebbles.solid_um: [0m     hostname (N defaults to 1 if not provided)
+[31mtutorials/pebbles.solid_um: [0m  3. Resource manager (e.g., SLURM, PBS/Torque, LSF, etc.)
+[31mtutorials/pebbles.solid_um: [0m  4. If none of a hostfile, the --host command line parameter, or an
+[31mtutorials/pebbles.solid_um: [0m     RM is present, Open MPI defaults to the number of processor cores
+[31mtutorials/pebbles.solid_um: [0m
+[31mtutorials/pebbles.solid_um: [0mIn all the above cases, if you want Open MPI to default to the number
+[31mtutorials/pebbles.solid_um: [0mof hardware threads instead of the number of processor cores, use the
+[31mtutorials/pebbles.solid_um: [0m--use-hwthread-cpus option.
+[31mtutorials/pebbles.solid_um: [0m
+[31mtutorials/pebbles.solid_um: [0mAlternatively, you can use the --oversubscribe option to ignore the
+[31mtutorials/pebbles.solid_um: [0mnumber of available slots when deciding the number of processes to
+[31mtutorials/pebbles.solid_um: [0mlaunch.
+[31mtutorials/pebbles.solid_um: [0m--------------------------------------------------------------------------
+[31mtutorials/pebbles.solid_um: [0m
+[31mtutorials/pebbles.solid_um: [0m
+[31mtutorials/pebbles.solid_um: [0mExit Code: 1
+[31mtutorials/pebbles.solid_um: [0m################################################################################
+[31mtutorials/pebbles.solid_um: [0mTester failed, reason: CRASH
+[31mtutorials/pebbles.solid_um: [0m
+tutorials/pebbles.solid_um [90m.......................................................[0m [31m[min_cpus=8][0m [31mFAILED (CRASH)[0m
+
+
+Final Test Results:
+--------------------------------------------------------------------------------------------------------------
+test:userobjects/subchannel_layered.ordering_error [90m...............[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:userobjects/subchannel_layered.invalid_component [90m............[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:userobjects/subchannel_layered.type_error [90m...................[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:userobjects/subchannel_layered.conflicting_bins [90m.............[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:userobjects/subchannel_layered.pin_1d [90m.......................[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:userobjects/subchannel_layered.zero_direction_vector [90m........[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:userobjects/subchannel_layered.wrong_type [90m...................[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:userobjects/subchannel_layered.subchannel_layered [90m...........[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:userobjects/subchannel_layered.user_component [90m...............[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:userobjects/subchannel_layered.1d_output [90m....................[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:fluid_prop_subs.sodium_sub [90m............................[0m [36m[App SodiumApp not registered in executable][0m [90mSKIP[0m
+test:fluid_prop_subs.sodium [90m................................[0m [36m[App SodiumApp not registered in executable][0m [90mSKIP[0m
+test:fluid_prop_subs.iapws95_sub [90m..........................[0m [36m[App IAPWS95App not registered in executable][0m [90mSKIP[0m
+test:fluid_prop_subs.iapws95 [90m..............................[0m [36m[App IAPWS95App not registered in executable][0m [90mSKIP[0m
+test:fluid_prop_subs.potassium_sub [90m......................[0m [36m[App PotassiumApp not registered in executable][0m [90mSKIP[0m
+test:fluid_prop_subs.potassium [90m..........................[0m [36m[App PotassiumApp not registered in executable][0m [90mSKIP[0m
+test:userobjects/hexagonal_gap_layered.gap_horizontal_layered [90m....[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:userobjects/hexagonal_gap_layered.user_component [90m............[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:userobjects/hexagonal_gap_layered.gap_layered [90m...............[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:userobjects/hexagonal_gap_layered.type_error [90m................[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:userobjects/hexagonal_gap_layered.bins_too_fine [90m.............[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:userobjects/layered_layered.1d_output [90m.......................[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:userobjects/layered_layered.bins_too_fine [90m...................[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:userobjects/layered_layered.conflicting_bins [90m................[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:userobjects/layered_layered.multiple_layers [90m.................[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:userobjects/layered_layered.3d_output [90m.......................[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:userobjects/sideset_layered.side_average [90m....................[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:userobjects/sideset_layered.invalid_boundary [90m................[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:userobjects/sideset_layered.z_bins_by_centroid [90m..............[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:userobjects/sideset_layered.z_bins [90m..........................[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:conduction/nonidentical_interface/cylinders.cylinder_conduction_mini [36m[NekRSProblem not found in ...][0m [90mSKIP[0m
+test:conduction/nonidentical_interface/cylinders.cylinder_conduction_reversed [36m[NekRSProblem not found...][0m [90mSKIP[0m
+test:conduction/nonidentical_interface/cylinders.cylinder_conduction [36m[NekRSProblem not found in execu...][0m [90mSKIP[0m
+test:conduction/nonidentical_interface/cylinders.cylinder_conduction_subcycle [36m[NekRSProblem not found...][0m [90mSKIP[0m
+test:multiple_nek_apps/two_channels.app_outputs [36m[NekRSProblem not found in executable,skipped dependency][0m [90mSKIP[0m
+test:multiple_nek_apps/two_channels.invalid_write_fld [36m[NekRSProblem not found in executable,skipped d...][0m [90mSKIP[0m
+test:multiple_nek_apps/two_channels.precompile [90m...................[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:multiple_nek_apps/two_channels.two_channels [36m[NekRSProblem not found in executable,skipped depend...][0m [90mSKIP[0m
+test:nek_errors/invalid_field.invalid_output [90m.....................[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:nek_errors/invalid_field.invalid_field [90m......................[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:nek_errors/invalid_field.invalid_field_uo [90m...................[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:nek_errors/incorrect_problem.incorrect_problem_pp [90m...........[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:nek_errors/incorrect_problem.nek_mesh [90m.......................[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:nek_errors/incorrect_problem.incorrect_problem_uo [90m...........[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+tutorials/load_from_exodus.load_nek [90m...........[0m [36m[NekRSProblem not found in executable,skipped dependency][0m [90mSKIP[0m
+tutorials/load_from_exodus.run_nek [90m...............................[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:userobjects/radial_layered.1d_output [90m........................[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:userobjects/radial_layered.2d_output [90m........................[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:userobjects/hexagonal_gap_layered/normals.normal_component [90m..[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:userobjects/hexagonal_gap_layered/normals.normal_component_aux [36m[NekRSProblem not found in execut...][0m [90mSKIP[0m
+test:nek_temp/first_order.first_order_volume_temperature [90m.........[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:nek_temp/first_order.first_order_temperature [90m................[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:nek_temp/second_order.second_order_volume_temperature [90m.......[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:nek_temp/second_order.second_order_temperature [90m..............[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:nek_mesh/first_order.first_order_volume_mesh [90m................[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:nek_mesh/first_order.first_order_mesh [90m.......................[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:nek_mesh/second_order.second_order_mesh [90m.....................[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:nek_mesh/second_order.second_order_volume_mesh [90m..............[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:postprocessors/nek_weighted_side_integral.invalid_field [90m.....[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:postprocessors/nek_weighted_side_integral.nek_weighted_side_integral [36m[NekRSProblem not found in ...][0m [90mSKIP[0m
+test:postprocessors/nek_side_average.zero_direction_vector [90m.......[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:postprocessors/nek_side_average.nek_side_average [90m............[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:postprocessors/nek_volume_average.zero_direction_vector [90m.....[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:postprocessors/nek_volume_average.nek_volume_average [90m........[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:postprocessors/nek_volume_extrema.invalid_field [90m.............[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:postprocessors/nek_volume_extrema.nek_volume_extrema [90m........[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:postprocessors/nek_side_extrema.invalid_field [90m...............[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:postprocessors/nek_side_extrema.nek_side_extrema [90m............[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:nek_standalone/lowMach.boundary [90m.............................[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:nek_standalone/lowMach.volume [90m...............................[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:auxkernels/nek_spatial_bin_component_aux.invalid_field [90m......[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:auxkernels/nek_spatial_bin_component_aux.invalid_uo [90m.........[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+tutorials/subchannel.postprocessing [90m..............................[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+tutorials/standalone.standalone [90m...........................[0m [36m[HEAVY, NekRSProblem not found in executable][0m [90mSKIP[0m
+test:userobjects/side/nondimensional.nondim [90m......................[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:userobjects/gap/nondimensional.nondim [90m.......................[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:userobjects/volume/nondimensional.nondim [90m....................[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:cht/nondimensional.sfr_pincell [90m.......................[0m [36m[HEAVY, NekRSProblem not found in executable][0m [90mSKIP[0m
+test:cht/sfr_pincell.sfr_pincell [90m..........................[0m [36m[HEAVY, NekRSProblem not found in executable][0m [90mSKIP[0m
+test:cht/pincell_p_v.output_cht [90m...........................[0m [36m[HEAVY, NekRSProblem not found in executable][0m [90mSKIP[0m
+test:cht/pebble.pebble [90m...........................................[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:nek_errors/no_occa_source_kernel.no_occa_source_kernel [90m......[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:nek_errors/no_moving_mesh.no_moving_mesh [90m....................[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:nek_errors/invalid_transfer_pp.invalid_transfer_pp [90m..........[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:nek_errors/incorrect_timestepper.incorrect_timestepper [90m......[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:nek_errors/used_scratch.occupied_scratch_space [90m..............[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:nek_errors/incorrect_executioner.incorrect_executioner [90m......[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:nek_errors/mpi_setup_multiple_inputs.too_few_mpi_ranks [90m......[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:nek_errors/nonzero_start.nonzero_start_time [90m.................[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:nek_errors/no_temp_var.no_temperature_variable [90m..............[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:nek_errors/invalid_bid_postprocessor.invalid_boundary_id [90m....[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:nek_errors/invalid_bid.invalid_boundary_id [90m..................[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:nek_errors/incorrect_nek_bc.missing_flux_bc [90m.................[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:nek_errors/incorrect_mesh.incorrect_mesh [90m....................[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:nek_errors/deformation.missing_displacements [90m................[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:nek_mesh/sidesets/cube.cube_sidesets [90m........................[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:nek_mesh/sidesets/pyramid.pyramid_sidesets [90m..................[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:conduction/boundary_and_volume/prism.pyramid [90m.........[0m [36m[HEAVY, NekRSProblem not found in executable][0m [90mSKIP[0m
+test:conduction/identical_interface/cube.slab_conduction [90m.........[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:conduction/identical_interface/pyramid.pyramid_conduction [36m[HEAVY, NekRSProblem not found in exec...][0m [90mSKIP[0m
+test:conduction/identical_volume/cube.slab_heat_source [90m....[0m [36m[HEAVY, NekRSProblem not found in executable][0m [90mSKIP[0m
+test:conduction/nonidentical_volume/nondimensional.cylinder_heat_source [36m[NekRSProblem not found in ex...][0m [90mSKIP[0m
+test:conduction/nonidentical_volume/cylinder.cylinder_heat_source  [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:nek_file_output/nek_as_sub.nek_as_sub_output [90m................[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:nek_file_output/nek_as_master.nek_as_master_output [90m..........[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:nek_file_output/nek_as_master_even.nek_as_master_even_output  [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:nek_file_output/nek_as_sub_even.nek_as_sub_even_output [90m......[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:sockeye_coupling/sockeye_sub.sockeye_sub [36m[NekRSProblem not found in executable, App SockeyeApp n...][0m [90mSKIP[0m
+test:sockeye_coupling/sockeye_master.sockeye_master [36m[NekRSProblem not found in executable, App Sockey...][0m [90mSKIP[0m
+test:sam_coupling/sam_sub.sam_sub [36m[NekRSProblem not found in executable, App SamApp not registered in...][0m [90mSKIP[0m
+test:sam_coupling/sam_master.sam_master [36m[NekRSProblem not found in executable, App SamApp not registe...][0m [90mSKIP[0m
+test:postprocessors/nek_weighted_side_average.nek_weighted_side_average [36m[NekRSProblem not found in ex...][0m [90mSKIP[0m
+test:postprocessors/nek_heat_flux_integral.nek_heat_flux_integral  [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:postprocessors/nek_volume_integral.nek_volume_integral [90m......[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:postprocessors/dimensionless_numbers/nondimensional.nondimensional_Re_Pe [36m[NekRSProblem not found...][0m [90mSKIP[0m
+test:postprocessors/dimensionless_numbers/dimensional.dimensional_Re_Pe [36m[NekRSProblem not found in ex...][0m [90mSKIP[0m
+test:postprocessors/nek_side_integral.nek_side_integral [90m..........[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:nek_standalone/ethier.test [90m..................................[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:nek_standalone/conj_ht.test [90m.................................[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:nek_standalone/channel.test [90m.................................[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:nek_standalone/from_restart.postprocess_from_restart [90m........[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:nek_standalone/ktauChannel.volume [90m....................[0m [36m[HEAVY, NekRSProblem not found in executable][0m [90mSKIP[0m
+test:nek_warnings/unused_boundary.boundary_warning [90m...............[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:nek_warnings/no_temp_solve.no_temp_solve [90m....................[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:thm_coupling/thm_sub.thm_sub [90m................................[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:thm_coupling/thm_master.thm_master [90m..........................[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:deformation/simple-cube.deformed_conduction [90m.................[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:deformation/vol-areas.deformed_areas [90m........................[0m [36m[NekRSProblem not found in executable][0m [90mSKIP[0m
+test:ics/bulk_energy_conservation_ic.missing_initial [90m......................................................[0m [32mOK[0m
+test:mesh/hexagonal_subchannel_mesh.three_rings [90m...........................................................[0m [32mOK[0m
+test:openmc_errors/block_mappings.overlapping_blocks [90m......................................................[0m [32mOK[0m
+test:userobjects/hexagonal_subchannel_bin.bin [90m.............................................................[0m [32mOK[0m
+test:neutronics/heat_source.overlap_all [90m...................................................................[0m [32mOK[0m
+test:neutronics/triggers.k_std_dev [90m........................................................................[0m [32mOK[0m
+test:mesh/hexagonal_gap_mesh.three_rings [90m..................................................................[0m [32mOK[0m
+test:neutronics/feedback/multi_component_temp.missing_one [90m.................................................[0m [32mOK[0m
+test:openmc_errors/input_params.invalid_batches [90m...........................................................[0m [32mOK[0m
+test:openmc_errors/mesh_tally.incorrect_scaling [90m...........................................................[0m [32mOK[0m
+test:userobjects/layered_gap_bin.bin [90m......................................................................[0m [32mOK[0m
+test:neutronics/openmc_xml.particles [90m......................................................................[0m [32mOK[0m
+test:openmc_errors/tallies.zero_tallies [90m...................................................................[0m [32mOK[0m
+test:openmc_errors/xs_temperatures.interpolation_min [90m......................................................[0m [32mOK[0m
+test:openmc_errors/cell_instances/insufficient_materials.insufficient_materials [90m...........................[0m [32mOK[0m
+test:openmc_errors/incorrect_aux_setup.incorrect_problem [90m..................................................[0m [32mOK[0m
+test:neutronics/relaxation/cell_tallies.global_with_alignment_unity_relax [90m.................................[0m [32mOK[0m
+test:openmc_errors/densities.zero_density [90m.................................................................[0m [32mOK[0m
+test:neutronics/symmetry/triso.generate_mesh [90m..............................................................[0m [32mOK[0m
+test:symmetry.reflection [90m..................................................................................[0m [32mOK[0m
+test:neutronics/mesh_tally.one_mesh [90m.......................................................................[0m [32mOK[0m
+test:userobjects/hexagonal_gap_bin.bin [90m....................................................................[0m [32mOK[0m
+test:neutronics/symmetry.generate_mesh [90m....................................................................[0m [32mOK[0m
+tutorials/gas_assembly.create_solid_mesh [90m..................................................................[0m [32mOK[0m
+test:neutronics/relaxation/mesh_tallies.global_without_alignment_unity_relax [90m..............................[0m [32mOK[0m
+test:neutronics/symmetry/rotational.generate_mesh [90m.........................................................[0m [32mOK[0m
+test:userobjects/radial_bin.bin [90m...........................................................................[0m [32mOK[0m
+test:userobjects/layered_bin.bin [90m..........................................................................[0m [32mOK[0m
+test:openmc_errors/incorrect_problem.incorrect_problem [90m....................................................[0m [32mOK[0m
+test:neutronics/heat_source/distrib_cell.solid [90m............................................................[0m [32mOK[0m
+test:openmc_errors/no_cell.no_cell [90m........................................................................[0m [32mOK[0m
+test:openmc_errors/level/phase_too_high.fluid_too_high [90m....................................................[0m [32mOK[0m
+test:openmc_errors/level/total_too_high.level_too_high [90m....................................................[0m [32mOK[0m
+test:ics/volumetric_heat_source_ic.sinusoidal [90m.............................................................[0m [32mOK[0m
+test:openmc_errors/mesh_translations.invalid_row [90m..........................................................[0m [32mOK[0m
+test:postprocessors/fission_tally_relative_error.fission_tally_relative_error [90m.............................[0m [32mOK[0m
+test:postprocessors/eigenvalue.k_eigenvalue [90m...............................................................[0m [32mOK[0m
+test:neutronics/feedback/triso/different_fill_univs.different_fill_universes [90m..............................[0m [32mOK[0m
+tutorials/gas_compact_cht.thm [90m.............................................................................[0m [32mOK[0m
+test:ics/bulk_energy_conservation_ic.invalid_mdot_cp [90m......................................................[0m [32mOK[0m
+test:mesh/hexagonal_subchannel_mesh.two_rings [90m.............................................................[0m [32mOK[0m
+test:neutronics/feedback/multiple_levels.multiple_layers [90m..................................................[0m [32mOK[0m
+test:neutronics/feedback/triso/missing_triso_fill.noncontinguous_triso_univs [90m..............................[0m [32mOK[0m
+test:userobjects/hexagonal_subchannel_bin.pin_centered [90m....................................................[0m [32mOK[0m
+test:openmc_errors/block_mappings.nonexistent_block [90m.......................................................[0m [32mOK[0m
+test:neutronics/feedback/different_units.different_units [90m..................................................[0m [32mOK[0m
+test:mesh/hexagonal_gap_mesh.two_rings [90m....................................................................[0m [32mOK[0m
+test:neutronics/heat_source.overlap_solid [90m.................................................................[0m [32mOK[0m
+test:neutronics/triggers.k_std_dev_cutoff [90m.................................................................[0m [32mOK[0m
+test:openmc_errors/input_params.invalid_max_batches [90m.......................................................[0m [32mOK[0m
+test:openmc_errors/mesh_tally.incorrect_order [90m.............................................................[0m [32mOK[0m
+test:userobjects/layered_gap_bin.axial_bin [90m................................................................[0m [32mOK[0m
+test:neutronics/feedback/multi_component_temp.wrong_length [90m................................................[0m [32mOK[0m
+test:openmc_errors/tallies.separate_tallies [90m...............................................................[0m [32mOK[0m
+test:openmc_errors/xs_temperatures.interpolation_max [90m......................................................[0m [32mOK[0m
+test:neutronics/openmc_xml.inactive [90m.......................................................................[0m [32mOK[0m
+test:openmc_errors/incorrect_aux_setup.incorrect_var_type [90m.................................................[0m [32mOK[0m
+test:neutronics/feedback/lattice.pincell [90m..................................................................[0m [32mOK[0m
+test:openmc_errors/cell_instances/insufficient_materials.no_error_for_solid [90m......................[0m [32mSYNTAX PASS[0m
+test:openmc_errors/densities.void_density [90m.................................................................[0m [32mOK[0m
+test:neutronics/feedback/single_level.pincell [90m.............................................................[0m [32mOK[0m
+test:symmetry.rotation [90m....................................................................................[0m [32mOK[0m
+test:neutronics/symmetry.symmetry_plane [90m...................................................................[0m [32mOK[0m
+test:neutronics/relaxation/cell_tallies.global_with_alignment_relax [90m.......................................[0m [32mOK[0m
+tutorials/gas_assembly.run_thm [90m...................................................................[0m [32mSYNTAX PASS[0m
+test:neutronics/feedback/unmapped_moose.unmapped [90m..........................................................[0m [32mOK[0m
+test:neutronics/source.sources [90m............................................................................[0m [32mOK[0m
+test:ics/bulk_energy_conservation_ic.sinusoidal [90m...........................................................[0m [32mOK[0m
+test:mesh/hexagonal_subchannel_mesh.one_ring [90m..............................................................[0m [32mOK[0m
+test:userobjects/hexagonal_subchannel_bin.pin_centered_3 [90m..................................................[0m [32mOK[0m
+test:neutronics/heat_source/distrib_cell.warn_zero_tallies [90m................................................[0m [32mOK[0m
+test:neutronics/symmetry/rotational.symmetry_sector [90m.......................................................[0m [32mOK[0m
+test:mesh/hexagonal_gap_mesh.one_ring [90m.....................................................................[0m [32mOK[0m
+test:openmc_errors/block_mappings.no_blocks [90m...............................................................[0m [32mOK[0m
+test:neutronics/mesh_tally.one_mesh_global [90m................................................................[0m [32mOK[0m
+test:openmc_errors/mesh_tally.incorrect_file [90m..............................................................[0m [32mOK[0m
+test:openmc_errors/input_params.missing_properties [90m........................................................[0m [32mOK[0m
+test:neutronics/heat_source.overlap_fluid [90m.................................................................[0m [32mOK[0m
+test:neutronics/triggers.k_variance [90m.......................................................................[0m [32mOK[0m
+test:ics/bulk_energy_conservation_ic.missing_paired_action [90m................................................[0m [32mOK[0m
+test:mesh/hexagonal_subchannel_mesh.three_rings_faces [90m.....................................................[0m [32mOK[0m
+test:neutronics/feedback/multi_component_temp.block_already_used [90m..........................................[0m [32mOK[0m
+test:neutronics/openmc_xml.batches [90m........................................................................[0m [32mOK[0m
+tutorials/gas_assembly.run_solid [90m.................................................................[0m [32mSYNTAX PASS[0m
+test:neutronics/relaxation/mesh_tallies.global_without_alignment_relax [90m....................................[0m [32mOK[0m
+test:openmc_errors/block_mappings.empty_block [90m.............................................................[0m [32mOK[0m
+test:ics/bulk_energy_conservation_ic.action [90m...............................................................[0m [32mOK[0m
+test:mesh/hexagonal_subchannel_mesh.two_rings_faces [90m.......................................................[0m [32mOK[0m
+test:neutronics/heat_source.partial_overlap_openmc_union [90m..................................................[0m [32mOK[0m
+test:neutronics/triggers.k_rel_err [90m........................................................................[0m [32mOK[0m
+test:mesh/hexagonal_subchannel_mesh.one_ring_faces [90m........................................................[0m [32mOK[0m
+test:openmc_errors/block_mappings.no_overlap [90m..............................................................[0m [32mOK[0m
+test:neutronics/heat_source.partial_overlap_moose_union_msg [90m...............................................[0m [32mOK[0m
+test:neutronics/feedback/multi_component_temp.collate_temps [90m...............................................[0m [32mOK[0m
+test:neutronics/relaxation/cell_tallies.global_with_alignment_rm_relax [90m....................................[0m [32mOK[0m
+test:openmc_errors/block_mappings.skipping_moose_feedback [90m.................................................[0m [32mOK[0m
+test:neutronics/triggers.tally_rel_err [90m....................................................................[0m [32mOK[0m
+test:transfers/nearest_point.nearest_point_receiver [90m..........................................[0m [36m[min_cpus=2][0m [32mOK[0m
+test:neutronics/heat_source.partial_overlap_moose_union [90m...................................................[0m [32mOK[0m
+test:openmc_errors/block_mappings.skipping_openmc_feedback [90m................................................[0m [32mOK[0m
+test:neutronics/heat_source.default_tally_blocks [90m..........................................................[0m [32mOK[0m
+test:openmc_errors/block_mappings.multiple_phases [90m.........................................................[0m [32mOK[0m
+test:neutronics/relaxation/mesh_tallies.local_without_alignment_unity_relax [90m...............................[0m [32mOK[0m
+test:openmc_errors/block_mappings.multiple_tally_settings [90m.................................................[0m [32mOK[0m
+test:neutronics/heat_source.cell_volumes [90m..................................................................[0m [32mOK[0m
+test:openmc_errors/block_mappings.absent_fluid_block [90m......................................................[0m [32mOK[0m
+test:neutronics/relaxation/cell_tallies.global_with_alignment_dg_relax [90m....................................[0m [32mOK[0m
+test:neutronics/mesh_tally.multiple_meshes [90m................................................................[0m [32mOK[0m
+test:openmc_errors/block_mappings.absent_solid_block [90m......................................................[0m [32mOK[0m
+test:openmc_errors/block_mappings.unequal_volumes [90m.........................................................[0m [32mOK[0m
+test:neutronics/symmetry/triso.symmetry_plane [90m.............................................................[0m [32mOK[0m
+test:neutronics/relaxation/mesh_tallies.local_without_alignment_relax [90m.....................................[0m [32mOK[0m
+test:neutronics/relaxation/cell_tallies.local_with_alignment_unity_relax [90m..................................[0m [32mOK[0m
+test:neutronics/triggers.mesh_tally_rel_err [90m...............................................................[0m [32mOK[0m
+test:neutronics/relaxation/mesh_tallies.output_fission_tally_mesh [90m.........................................[0m [32mOK[0m
+test:neutronics/relaxation/cell_tallies.local_with_alignment_relax [90m........................................[0m [32mOK[0m
+test:neutronics/mesh_tally.multiple_meshes_global [90m.........................................................[0m [32mOK[0m
+tutorials/lwr_solid.lwr_pincell [90m..............................................................[0m [36m[min_cpus=4][0m [32mOK[0m
+test:neutronics/relaxation/cell_tallies.global_without_alignment_unity_relax [90m..............................[0m [32mOK[0m
+test:neutronics/mesh_tally.different_units [90m................................................................[0m [32mOK[0m
+test:neutronics/relaxation/cell_tallies.global_without_alignment_relax [90m....................................[0m [32mOK[0m
+tutorials/lwr_solid.lwr_pincell_mesh [90m.........................................................[0m [36m[min_cpus=4][0m [32mOK[0m
+test:neutronics/relaxation/cell_tallies.local_without_alignment_unity_relax [90m..................[0m [36m[min_cpus=2][0m [32mOK[0m
+test:neutronics/relaxation/cell_tallies.local_without_alignment_relax [90m........................[0m [36m[min_cpus=2][0m [32mOK[0m
+test:neutronics/mesh_tally.different_units_and_translations [90m...............................................[0m [32mOK[0m
+test:neutronics/relaxation/cell_tallies.output_fission_tally_cell [90m.........................................[0m [32mOK[0m
+test:neutronics/mesh_tally.fission_tally_std_dev [90m..........................................................[0m [32mOK[0m
+test:neutronics/solid.zero_power [90m...............................................[0m [36m[min_threads=2,min_cpus=4][0m [32mOK[0m
+test:neutronics/solid.three_pebbles [90m............................................[0m [36m[min_threads=2,min_cpus=4][0m [32mOK[0m
+test:neutronics/solid.missing_pebble [90m...........................................[0m [36m[min_threads=2,min_cpus=4][0m [32mOK[0m
+tutorials/pebbles.solid [90m..........................................................[0m [31m[min_cpus=8][0m [31mFAILED (CRASH)[0m
+tutorials/pebbles.solid_um [90m.......................................................[0m [31m[min_cpus=8][0m [31mFAILED (CRASH)[0m
+--------------------------------------------------------------------------------------------------------------
+Ran 132 tests in 110.0 seconds. Average test time 3.6 seconds, maximum test time 28.1 seconds.
+[1m[32m130 passed[0m, [1m128 skipped[0m, [1m0 pending[0m, [1m[31m2 FAILED[0m
