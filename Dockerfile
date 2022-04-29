@@ -34,7 +34,6 @@ RUN DEBIAN_FRONTEND=noninteractive TZ=America/Chicago apt-get -y install tzdata
 RUN apt-get install -y \
         mpich libmpich-dev \
         openmpi-bin libopenmpi-dev \
-        cmake \
         pkg-config
 
 RUN pip install --upgrade cmake
@@ -78,21 +77,6 @@ ENV CXX mpicxx
 ENV FC mpif90
 ENV OPENMC_CROSS_SECTIONS /home/multiphysics/cross_sections/endfb71_hdf5/cross_sections.xml
 
-# # build cmake and install in /home/software/cmake
-# RUN mkdir /home/software/cmake && \
-#     cd /home/software/temp && \
-#     wget https://cmake.org/files/v3.23/cmake-3.23.1.tar.gz && \
-#     tar -xvf cmake-3.23.1.tar.gz && \
-#     cd cmake-3.23.1 && \
-#     mkdir build && \
-#     cd build && \
-#     ../configure --prefix="/home/software/cmake" && \
-#     make -j8 && \
-#     make install && \
-#     rm -rf /home/software/temp/*
-
-# RUN cmake --version
-
 # build hdf5 and install in /home/software/hdf5
 RUN mkdir /home/software/hdf5 && \
     cd /home/software/temp && \
@@ -122,9 +106,6 @@ ENV PYTHONPATH /home/multiphysics/cardinal/contrib/moose/python:{$PYTHONPATH}
 RUN ./contrib/moose/scripts/update_and_rebuild_petsc.sh && \
     ./contrib/moose/scripts/update_and_rebuild_libmesh.sh
 
-# See environemnt before make
-# RUN env | sort >> before_make.txt
-
 # Obtain Makefile and build
 COPY Makefile /home/multiphysics/cardinal/
 RUN make -j8
@@ -139,11 +120,5 @@ ENV MOOSE_DIR /home/multiphysics/cardinal/contrib/moose
 ENV PETSC_DIR /home/multiphysics/cardinal/contrib/moose/petsc/
 # DO NOT SET LIBMESH_DIR, it causes the tests not to run
 
-# # See environemnt before running tests
-# # RUN env | sort >> before_tests.txt
-
-# # COPY hostfile /home/multiphysics/cardinal
 # Run tests
-# # RUN touch test_output
-# # RUN ./run_tests -j8 >> no_nek_j8_output.txt
 RUN ./run_tests -j8 
