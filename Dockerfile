@@ -14,6 +14,7 @@ RUN apt-get update && \
         xz-utils \
         gcc \
         make \
+        autoconf \
         python3 \
         python3-distutils \
         python3-dev \
@@ -22,8 +23,7 @@ RUN apt-get update && \
         bison \
         libssl-dev \
         build-essential \
-        libtool \
-        autoconf
+        libtool
 
 RUN pip install python-config
 
@@ -34,7 +34,12 @@ RUN DEBIAN_FRONTEND=noninteractive TZ=America/Chicago apt-get -y install tzdata
 RUN apt-get install -y \
         mpich libmpich-dev \
         openmpi-bin libopenmpi-dev \
+        cmake \
         pkg-config
+
+RUN pip install --upgrade cmake
+
+# RUN cmake --version
 
 # set alternative so that python runs python 3 code without installing python 2 
 # the arguments are as follows:
@@ -73,18 +78,18 @@ ENV CXX mpicxx
 ENV FC mpif90
 ENV OPENMC_CROSS_SECTIONS /home/multiphysics/cross_sections/endfb71_hdf5/cross_sections.xml
 
-# build cmake and install in /home/software/cmake
-RUN mkdir /home/software/cmake && \
-    cd /home/software/temp && \
-    wget https://cmake.org/files/v3.23/cmake-3.23.1.tar.gz && \
-    tar -xvf cmake-3.23.1.tar.gz && \
-    cd cmake-3.23.1 && \
-    mkdir build && \
-    cd build && \
-    ../configure --prefix="/home/software/cmake" && \
-    make -j8 && \
-    make install && \
-    rm -rf /home/software/temp/*
+# # build cmake and install in /home/software/cmake
+# RUN mkdir /home/software/cmake && \
+#     cd /home/software/temp && \
+#     wget https://cmake.org/files/v3.23/cmake-3.23.1.tar.gz && \
+#     tar -xvf cmake-3.23.1.tar.gz && \
+#     cd cmake-3.23.1 && \
+#     mkdir build && \
+#     cd build && \
+#     ../configure --prefix="/home/software/cmake" && \
+#     make -j8 && \
+#     make install && \
+#     rm -rf /home/software/temp/*
 
 # RUN cmake --version
 
@@ -113,38 +118,32 @@ ENV NEKRS_OCCA_MODE_DEFAULT CPU
 # Add python path
 ENV PYTHONPATH /home/multiphysics/cardinal/contrib/moose/python:{$PYTHONPATH}
 
-# # build PETSc and libMesh, okay if PETSc tests fail
-# RUN ./contrib/moose/scripts/update_and_rebuild_petsc.sh && \
-#     ./contrib/moose/scripts/update_and_rebuild_libmesh.sh
+# build PETSc and libMesh, okay if PETSc tests fail
+RUN ./contrib/moose/scripts/update_and_rebuild_petsc.sh && \
+    ./contrib/moose/scripts/update_and_rebuild_libmesh.sh
 
-# # See environemnt before make
+# See environemnt before make
 # RUN env | sort >> before_make.txt
 
-# # Obtain Makefile and build
-# COPY Makefile /home/multiphysics/cardinal/
-# RUN make -j8
+# Obtain Makefile and build
+COPY Makefile /home/multiphysics/cardinal/
+RUN make -j8
 
-# # Remove files not needed to run cardrinal. reduces image size, push/pull time
-# RUN rm -rf /home/simulator/temp
-# # TODO potentiatlly remove build directory and other compliation outputs 
+# Remove files not needed to run cardrinal. reduces image size, push/pull time
+RUN rm -rf /home/simulator/temp
 
-# # Set environment variables so tests can run
-# # NEEDS MOOSE_DIR to run tests
-# ENV MOOSE_DIR /home/multiphysics/cardinal/contrib/moose
-# # tests seem to run with or with out the PETSC_DIR
-# # ENV PETSC_DIR /home/multiphysics/cardinal/contrib/moose/petsc/
-# # when either of the two are commented in, the tests dont run. when they are commented out. the tests run
-# # ENV LIBMESH_DIR /home/multiphysics/cardinal/contrib/moose/libmesh/
-# # ENV LIBMESH_DIR /home/multiphysics/cardinal/contrib/moose/libmesh/installed/bin
+# Set environment variables so tests can run
+# NEEDS MOOSE_DIR to run tests
+ENV MOOSE_DIR /home/multiphysics/cardinal/contrib/moose
+# tests seem to run with or with out the PETSC_DIR
+ENV PETSC_DIR /home/multiphysics/cardinal/contrib/moose/petsc/
+# DO NOT SET LIBMESH_DIR, it causes the tests not to run
 
 # # See environemnt before running tests
 # # RUN env | sort >> before_tests.txt
 
 # # COPY hostfile /home/multiphysics/cardinal
-# # # Run tests
+# Run tests
 # # RUN touch test_output
-# # RUN ./run_tests 1>> one_thread_output.txt 2>> one_thread_error.txt
-# # RUN ./run_tests -j8 1>> j8_output.txt 2>> j8_error.txt
 # # RUN ./run_tests -j8 >> no_nek_j8_output.txt
-# RUN ./run_tests -j8 
-# # TODO add hostfile to try and subvert error
+RUN ./run_tests -j8 
