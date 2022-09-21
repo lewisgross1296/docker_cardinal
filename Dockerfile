@@ -121,4 +121,4 @@ ENV PETSC_DIR /home/multiphysics/cardinal/contrib/moose/petsc/
 # DO NOT SET LIBMESH_DIR, it causes the tests not to run
 
 # Run tests
-# RUN ./run_tests -j8
+RUN ./run_tests -j8
