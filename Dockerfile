@@ -40,7 +40,7 @@ RUN pip install --upgrade cmake
 
 # RUN cmake --version
 
-# set alternative so that python runs python 3 code without installing python 2 
+# set alternative so that python runs python 3 code without installing python 2
 # the arguments are as follows:
 # RUN update-alternatives --install </path/to/alternative> <name> </path/to/source> <priority>
 RUN update-alternatives --install /usr/local/bin/python python /usr/bin/python3 99
@@ -80,7 +80,7 @@ ENV OPENMC_CROSS_SECTIONS /home/multiphysics/cross_sections/endfb71_hdf5/cross_s
 # build hdf5 and install in /home/software/hdf5
 RUN mkdir /home/software/hdf5 && \
     cd /home/software/temp && \
-    wget https://support.hdfgroup.org/ftp/HDF5/releases/hdf5-1.13/hdf5-1.13.1/src/hdf5-1.13.1.tar.gz && \
+    wget https://fossies.org/linux/misc/hdf5-1.13.1.tar.gz && \
     tar -xvf hdf5-1.13.1.tar.gz && \
     cd hdf5-1.13.1 && \
     mkdir build && \
@@ -88,7 +88,7 @@ RUN mkdir /home/software/hdf5 && \
     ../configure --prefix="/home/software/hdf5" --enable-optimization=high --enable-shared  --enable-hl --enable-build-mode=production --enable-parallel && \
     make -j8 && \
     make install && \
-    rm -rf /home/software/temp/*  
+    rm -rf /home/software/temp/*
 
 # HDF5 env vars
 ENV HDF5_ROOT /home/software/hdf5
@@ -121,4 +121,4 @@ ENV PETSC_DIR /home/multiphysics/cardinal/contrib/moose/petsc/
 # DO NOT SET LIBMESH_DIR, it causes the tests not to run
 
 # Run tests
-RUN ./run_tests -j8 
+# RUN ./run_tests -j8
