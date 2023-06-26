@@ -11,6 +11,7 @@ RUN apt-get update && \
     apt-get install -y \
         git \
         wget \
+        vim \
         xz-utils \
         gcc \
         make \
@@ -77,12 +78,12 @@ ENV CXX mpicxx
 ENV FC mpif90
 ENV OPENMC_CROSS_SECTIONS /home/multiphysics/cross_sections/endfb71_hdf5/cross_sections.xml
 
-# build hdf5 and install in /home/software/hdf5
+# # build hdf5 and install in /home/software/hdf5
 RUN mkdir /home/software/hdf5 && \
     cd /home/software/temp && \
-    wget https://fossies.org/linux/misc/hdf5-1.13.1.tar.gz && \
-    tar -xvf hdf5-1.13.1.tar.gz && \
-    cd hdf5-1.13.1 && \
+    wget https://github.com/HDFGroup/hdf5/archive/refs/tags/hdf5-1_13_2.tar.gz && \
+    tar -xvf hdf5-1_13_2.tar.gz && \
+    cd hdf5-hdf5-1_13_2 && \
     mkdir build && \
     cd build && \
     ../configure --prefix="/home/software/hdf5" --enable-optimization=high --enable-shared  --enable-hl --enable-build-mode=production --enable-parallel && \
