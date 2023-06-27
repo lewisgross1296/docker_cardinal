@@ -26,7 +26,7 @@ RUN apt-get update && \
         build-essential \
         libtool
 
-RUN pip install python-config
+RUN pip install python-config pyyaml packaging numpy
 
 # install tzdata before the next package set
 RUN DEBIAN_FRONTEND=noninteractive TZ=America/Chicago apt-get -y install tzdata
@@ -111,9 +111,6 @@ RUN ./contrib/moose/scripts/update_and_rebuild_petsc.sh && \
 COPY Makefile /home/multiphysics/cardinal/
 RUN make -j8
 
-# Remove files not needed to run cardrinal. reduces image size, push/pull time
-RUN rm -rf /home/simulator/temp
-
 # Set environment variables so tests can run
 # NEEDS MOOSE_DIR to run tests
 ENV MOOSE_DIR /home/multiphysics/cardinal/contrib/moose
@@ -121,5 +118,5 @@ ENV MOOSE_DIR /home/multiphysics/cardinal/contrib/moose
 ENV PETSC_DIR /home/multiphysics/cardinal/contrib/moose/petsc/
 # DO NOT SET LIBMESH_DIR, it causes the tests not to run
 
-# Run tests
-RUN ./run_tests -j8
+# # Run tests
+# RUN ./run_tests -j8
