@@ -26,7 +26,7 @@ RUN apt-get update && \
         build-essential \
         libtool
 
-RUN pip install python-config pyyaml packaging numpy
+RUN pip install python-config pyyaml packaging numpy matplotlib
 
 # install tzdata before the next package set
 RUN DEBIAN_FRONTEND=noninteractive TZ=America/Chicago apt-get -y install tzdata
@@ -76,7 +76,6 @@ ENV NEKRS_HOME /home/multiphysics/cardinal/install
 ENV CC mpicc
 ENV CXX mpicxx
 ENV FC mpif90
-ENV OPENMC_CROSS_SECTIONS /home/multiphysics/cross_sections/endfb71_hdf5/cross_sections.xml
 
 # # build hdf5 and install in /home/software/hdf5
 RUN mkdir /home/software/hdf5 && \
@@ -111,12 +110,17 @@ RUN ./contrib/moose/scripts/update_and_rebuild_petsc.sh && \
 COPY Makefile /home/multiphysics/cardinal/
 RUN make -j8
 
+# install OpenMC python API
+RUN cd contrib/openmc && \
+    pip install .
+
 # Set environment variables so tests can run
 # NEEDS MOOSE_DIR to run tests
 ENV MOOSE_DIR /home/multiphysics/cardinal/contrib/moose
 # tests seem to run with or with out the PETSC_DIR
 ENV PETSC_DIR /home/multiphysics/cardinal/contrib/moose/petsc/
 # DO NOT SET LIBMESH_DIR, it causes the tests not to run
+ENV OPENMC_CROSS_SECTIONS /home/multiphysics/cross_sections/endfb-vii.1-hdf5/cross_sections.xml
 
-# # Run tests
-# RUN ./run_tests -j8
+# Run tests
+RUN ./run_tests -j8
