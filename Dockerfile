@@ -100,7 +100,7 @@ ENV METHOD opt
 ENV NEKRS_OCCA_MODE_DEFAULT CPU
 
 # Add python path
-ENV PYTHONPATH /home/multiphysics/cardinal/contrib/moose/python:{$PYTHONPATH}
+ENV PYTHONPATH /home/multiphysics/cardinal/contrib/moose/python:${PYTHONPATH}
 
 # build PETSc and libMesh, okay if PETSc tests fail
 RUN ./contrib/moose/scripts/update_and_rebuild_petsc.sh && \
@@ -122,5 +122,5 @@ ENV PETSC_DIR /home/multiphysics/cardinal/contrib/moose/petsc/
 # DO NOT SET LIBMESH_DIR, it causes the tests not to run
 ENV OPENMC_CROSS_SECTIONS /home/multiphysics/cross_sections/endfb-vii.1-hdf5/cross_sections.xml
 
-# Run tests
-RUN ./run_tests -j8
+# Run tests best to do in interactive to see output
+# RUN ./run_tests -j8
