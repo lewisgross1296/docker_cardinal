@@ -1,18 +1,15 @@
-# ======================================================================================
-# Cardinal Makefile
-# ======================================================================================
-#
 # Optional environment variables:
 #
 # To control where various third-party dependencies are. You don't need to set
 # any of these unless you want to use non-submodule third-party dependencies:
 
 # * CONTRIB_DIR      : Dir with third-party dependencies (default: contrib)
-# * MOOSE_SUBMODULE  : Top-level MOOSE dir (default: $(CONTRIB_DIR)/moose)
+# * MOOSE_DIR        : Top-level MOOSE dir (default: $(CONTRIB_DIR)/moose)
 # * NEKRS_DIR        : Top-level NekRS dir (default: $(CONTRIB_DIR)/nekRS)
 # * OPENMC_DIR       : Top-level OpenMC dir (default: $(CONTRIB_DIR)/openmc)
 # * DAGMC_DIR        : Top-level DagMC dir (default: $(CONTRIB_DIR)/DAGMC)
 # * MOAB_DIR         : Top-level Moab dir (default: $(CONTRIB_DIR)/moab)
+# * GRIFFIN_DIR      : Top-level Griffin dir (default: $(CONTRIB_DIR)/griffin)
 # * BISON_DIR        : Top-level Bison dir (default: $(CONTRIB_DIR)/bison)
 # * SAM_DIR          : Top-level SAM dir (default: $(CONTRIB_DIR)/SAM)
 # * SOCKEYE_DIR      : Top-level Sockeye dir (default: $(CONTRIB_DIR)/sockeye)
@@ -32,30 +29,54 @@
 #                       libraries from $(HDF5_ROOT)/lib.
 # * HDF5_INCLUDE_DIR  : Top-level HDF5 header dir (default: $(HDF5_ROOT)/include)
 # * HDF5_LIBDIR       : Top-level HDF5 lib dir (default: $(HDF5_ROOT)/lib)
-# * PETSC_DIR         : Top-level PETSc dir (default: $(MOOSE_SUBMODULE)/petsc)
+# * PETSC_DIR         : Top-level PETSc dir (default: $(MOOSE_DIR)/petsc)
 # * PETSC_ARCH        : PETSc architecture (default: arch-moose)
 # ======================================================================================
 
-# Whether you want to build with NekRS; set to anything except 'yes' to skip
+# Whether you want to build with NekRS
 ENABLE_NEK          ?= yes
 
-# Whether you want to build with OpenMC; set to anything except 'yes' to skip
+# Whether you want to build with OpenMC
 ENABLE_OPENMC       ?= yes
 
-# Whether you want to build OpenMC with DAGMC support; set to anything except 'yes' to skip
+# Whether you want to build OpenMC with DAGMC support
 ENABLE_DAGMC        ?= no
+
+# What GPU backends to enable for Nek (if any)
+OCCA_CUDA_ENABLED=0
+OCCA_HIP_ENABLED=0
+OCCA_OPENCL_ENABLED=0
+
+# Whether to enable AMGX in Nek (only available for Nvidia GPU)
+AMGX_ENABLED=0
+
+ifeq ($(AMGX_ENABLED),1)
+  ifeq ($(OCCA_CUDA_ENABLED),0)
+    $(info Turning on CUDA backend because AMGX was requested)
+    OCCA_CUDA_ENABLED=1
+  endif
+endif
 
 CARDINAL_DIR        := $(abspath $(dir $(word $(words $(MAKEFILE_LIST)),$(MAKEFILE_LIST))))
 CONTRIB_DIR         := $(CARDINAL_DIR)/contrib
+
+# Use the MOOSE submodule if it exists and MOOSE_DIR is not set
 MOOSE_SUBMODULE     ?= $(CONTRIB_DIR)/moose
+ifneq ($(wildcard $(MOOSE_SUBMODULE)/framework/Makefile),)
+	MOOSE_DIR        ?= $(MOOSE_SUBMODULE)
+else
+	MOOSE_DIR        ?= $(shell dirname `pwd`)/moose
+endif
+
 NEKRS_DIR           ?= $(CONTRIB_DIR)/nekRS
 OPENMC_DIR          ?= $(CONTRIB_DIR)/openmc
 DAGMC_DIR           ?= $(CONTRIB_DIR)/DAGMC
 MOAB_DIR            ?= $(CONTRIB_DIR)/moab
-PETSC_DIR           ?= $(MOOSE_SUBMODULE)/petsc
+PETSC_DIR           ?= $(MOOSE_DIR)/petsc
 PETSC_ARCH          ?= arch-moose
-LIBMESH_DIR         ?= $(MOOSE_SUBMODULE)/libmesh/installed/
+LIBMESH_DIR         ?= $(MOOSE_DIR)/libmesh/installed/
 CONTRIB_INSTALL_DIR ?= $(CARDINAL_DIR)/install
+GRIFFIN_DIR         ?= $(CONTRIB_DIR)/griffin
 BISON_DIR           ?= $(CONTRIB_DIR)/bison
 SAM_DIR             ?= $(CONTRIB_DIR)/SAM
 SOCKEYE_DIR         ?= $(CONTRIB_DIR)/sockeye
@@ -129,10 +150,6 @@ else
 	BUILD_TYPE := Release
 endif
 
-OCCA_CUDA_ENABLED=0
-OCCA_HIP_ENABLED=0
-OCCA_OPENCL_ENABLED=0
-
 DAGMC_BUILDDIR := $(CARDINAL_DIR)/build/DAGMC
 DAGMC_INSTALL_DIR := $(CONTRIB_INSTALL_DIR)
 
@@ -150,23 +167,23 @@ NEKRS_INCLUDES := \
 	-I$(NEKRS_DIR)/src/bench/fdm \
 	-I$(NEKRS_DIR)/src/cds \
 	-I$(NEKRS_DIR)/src/core \
-	-I$(NEKRS_DIR)/src/elliptic \
-	-I$(NEKRS_DIR)/src/elliptic/amgSolver \
-	-I$(NEKRS_DIR)/src/elliptic/amgSolver/amgx \
-	-I$(NEKRS_DIR)/src/elliptic/amgSolver/hypre \
-	-I$(NEKRS_DIR)/src/elliptic/amgSolver/parAlmond \
-	-I$(NEKRS_DIR)/src/elliptic/linearSolver \
+	-I$(NEKRS_DIR)/src/findpts \
 	-I$(NEKRS_DIR)/src/io \
 	-I$(NEKRS_DIR)/src/lib \
 	-I$(NEKRS_DIR)/src/linAlg \
 	-I$(NEKRS_DIR)/src/mesh \
 	-I$(NEKRS_DIR)/src/navierStokes \
 	-I$(NEKRS_DIR)/src/nekInterface \
+	-I$(NEKRS_DIR)/src/neknek \
 	-I$(NEKRS_DIR)/src/plugins \
+	-I$(NEKRS_DIR)/src/pointInterpolation \
 	-I$(NEKRS_DIR)/src/postProcessing \
 	-I$(NEKRS_DIR)/src/regularization \
 	-I$(NEKRS_DIR)/src/setup \
-	-I$(NEKRS_DIR)/src/timeStepper \
+	-I$(NEKRS_DIR)/src/solvers/cvode \
+	-I$(NEKRS_DIR)/src/solvers/elliptic \
+	-I$(NEKRS_DIR)/src/solvers/elliptic/linearSolver \
+	-I$(NEKRS_DIR)/src/solvers/elliptic/MG \
 	-I$(NEKRS_DIR)/src/udf \
 	-I$(NEKRS_DIR)/src/utils \
 	-I$(NEKRS_INSTALL_DIR)/gatherScatter \
@@ -203,13 +220,6 @@ endif
 # MOOSE core objects
 # ======================================================================================
 
-# Use the MOOSE submodule if it exists and MOOSE_DIR is not set
-ifneq ($(wildcard $(MOOSE_SUBMODULE)/framework/Makefile),)
-	MOOSE_DIR        ?= $(MOOSE_SUBMODULE)
-else
-	MOOSE_DIR        ?= $(shell dirname `pwd`)/moose
-endif
-
 # framework
 FRAMEWORK_DIR      := $(MOOSE_DIR)/framework
 include $(FRAMEWORK_DIR)/build.mk
@@ -220,6 +230,29 @@ include $(FRAMEWORK_DIR)/moose.mk
 # ======================================================================================
 
 include $(MOOSE_DIR)/modules/modules.mk
+
+# Griffin submodule
+ifneq ($(GRIFFIN_CONTENT),)
+ libmesh_CXXFLAGS    += -DENABLE_GRIFFIN_COUPLING
+
+ APPLICATION_DIR    := $(GRIFFIN_DIR)/isoxml
+ APPLICATION_NAME   := isoxml
+ include            $(FRAMEWORK_DIR)/app.mk
+ #ADDITIONAL_DEPEND_LIBS += $(CURDIR)/isoxml/lib/libisoxml-$(METHOD).la
+
+ APPLICATION_DIR    := $(GRIFFIN_DIR)/xs_generation
+ APPLICATION_NAME   := mcc3
+ include            $(APPLICATION_DIR)/mcc3.dep
+ include            $(FRAMEWORK_DIR)/app.mk
+
+ APPLICATION_DIR    := $(GRIFFIN_DIR)/radiation_transport
+ APPLICATION_NAME   := radiation_transport
+ include            $(FRAMEWORK_DIR)/app.mk
+
+ APPLICATION_DIR     := $(GRIFFIN_DIR)
+ APPLICATION_NAME    := griffin
+ include             $(FRAMEWORK_DIR)/app.mk
+endif
 
 # Bison submodule
 ifneq ($(BISON_CONTENT),)
@@ -368,7 +401,18 @@ ifeq ($(ENABLE_NEK), yes)
 endif
 
 ifeq ($(ENABLE_OPENMC), yes)
-  ADDITIONAL_LIBS += -L$(OPENMC_LIBDIR) -lopenmc -lhdf5_hl $(CC_LINKER_SLFLAG)$(OPENMC_LIBDIR)
+  ADDITIONAL_LIBS += -L$(OPENMC_LIBDIR) -lopenmc -lhdf5_hl
+  ifeq ($(ENABLE_DAGMC), ON)
+    ADDITIONAL_LIBS += -luwuw -ldagmc -lpyne_dagmc -lMOAB
+  endif
+  ADDITIONAL_LIBS += $(CC_LINKER_SLFLAG)$(OPENMC_LIBDIR)
+endif
+
+# Determin if we need libpng and where using pkg-config (if available)
+LIBPNG_FLAGS ?= $(shell pkg-config --libs libpng 2>/dev/null)
+ifneq (,$(findstring -lpng, $(LIBPNG_FLAGS)))
+  ADDITIONAL_LIBS += $(LIBPNG_FLAGS)
+  $(info Linking libpng: $(LIBPNG_FLAGS))
 endif
 
 include            $(FRAMEWORK_DIR)/app.mk
@@ -389,11 +433,14 @@ ifeq ($(ENABLE_NEK), yes)
 endif
 
 ifeq ($(ENABLE_OPENMC), yes)
-  CARDINAL_EXTERNAL_FLAGS += -L$(OPENMC_LIBDIR) -L$(HDF5_LIBDIR) -lopenmc \
-	                           $(CC_LINKER_SLFLAG)$(OPENMC_LIBDIR) \
+  CARDINAL_EXTERNAL_FLAGS += -L$(OPENMC_LIBDIR) -L$(HDF5_LIBDIR) -lopenmc
+  ifeq ($(ENABLE_DAGMC), ON)
+    CARDINAL_EXTERNAL_FLAGS += -luwuw -ldagmc -lpyne_dagmc -lMOAB
+  endif
+  CARDINAL_EXTERNAL_FLAGS += $(CC_LINKER_SLFLAG)$(OPENMC_LIBDIR) \
 	                           $(CC_LINKER_SLFLAG)$(HDF5_LIBDIR)
 endif
-
+#
 # EXTERNAL_FLAGS are for rules in app.mk
 $(app_LIB): EXTERNAL_FLAGS := $(CARDINAL_EXTERNAL_FLAGS)
 $(app_test_LIB): EXTERNAL_FLAGS := $(CARDINAL_EXTERNAL_FLAGS)

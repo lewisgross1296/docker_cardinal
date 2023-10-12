@@ -77,10 +77,11 @@ ENV CC mpicc
 ENV CXX mpicxx
 ENV FC mpif90
 
-# # build hdf5 and install in /home/software/hdf5
+COPY hdf5-1_13_2.tar.gz /home/software/temp
+
+# build hdf5 and install in /home/software/hdf5
 RUN mkdir /home/software/hdf5 && \
     cd /home/software/temp && \
-    wget https://github.com/HDFGroup/hdf5/archive/refs/tags/hdf5-1_13_2.tar.gz && \
     tar -xvf hdf5-1_13_2.tar.gz && \
     cd hdf5-hdf5-1_13_2 && \
     mkdir build && \
